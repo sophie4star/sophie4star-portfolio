@@ -1,0 +1,275 @@
+{
+  "identity": {
+    "name": "Sophie Krajmalnik",
+    "headline": "Data Scientist & Product Manager",
+    "tagline": "Turning Complex Data into Human Insight",
+    "subheading": "I combine data science principles, cross-functional leadership, and systems thinking to drive innovation in big tech and healthcare. Over 7 years of research projects and 5 summers in leadership roles have shaped my ability to see the whole picture—from technical execution to human impact.",
+    "cta": "Let's connect",
+    "contact": {
+      "email": "sophie4star@live.com",
+      "linkedin": "https://www.linkedin.com/in/sophie-krajmalnik/",
+      "linktree": "https://linktr.ee/sophie_krajmalnik"
+    }
+  },
+  "currentWork": [
+    {
+      "id": "research",
+      "title": "AI Research Assistant",
+      "organization": "UNT Department of Data Science | IDEA Lab",
+      "date": "August 2026 - Present",
+      "description": "Conducting needs assessments and research synthesis to inform product requirements for an agentic AI tool for education. Bridging research and product to shape the future of AI in learning.",
+      "highlights": [
+        "Design product requirements for educational AI systems",
+        "Synthesize cross-functional research insights",
+        "Transform user needs into technical specifications"
+      ],
+      "skills": ["Product Management", "AI/ML", "Requirements Analysis", "Research Synthesis"]
+    },
+    {
+      "id": "transfer",
+      "title": "Returner Transfer Ambassador",
+      "organization": "University of North Texas Transfer Center",
+      "date": "July 2026 - Present",
+      "description": "Leading engagement programs for returning and transfer students. Translating student needs into semester-long initiatives that drive connection and retention across campus.",
+      "highlights": [
+        "Translate user needs into semester-long engagement programs",
+        "Launch and coordinate activity series (marketing, logistics, programming)",
+        "Facilitate cooperation across 6-member team"
+      ],
+      "skills": ["Leadership", "Program Planning", "Mentorship", "Cross-functional Collaboration"]
+    }
+  ],
+  "experiencesByRole": {
+    "Data & Product": [
+      {
+        "id": "drivetime",
+        "title": "Data Science Intern",
+        "organization": "DriveTime",
+        "date": "May 2026 - July 2026",
+        "location": "Tempe, AZ",
+        "description": "Evaluated predictive models powering marketing investment decisions. Built stakeholder-facing dashboards and developed a prioritization framework for model improvements.",
+        "highlights": [
+          "Evaluated core predictive model (logistic regression) across 100s of millions of records",
+          "Achieved 0.6 AUC and 7.77x lift in separating marketing opportunities",
+          "Ran structured evaluation of 20+ model inputs with prioritization framework",
+          "Developed stakeholder-facing dashboard translating findings into actionable recommendations"
+        ],
+        "skills": ["Python", "Data Analysis", "Machine Learning", "Stakeholder Communication", "Dashboard Development"]
+      }
+    ],
+    "Leadership & Mentorship": [
+      {
+        "id": "unit-manager",
+        "title": "Unit Manager",
+        "organization": "Camp Young Judaea - Texas",
+        "date": "June 2025 - August 2025",
+        "location": "Wimberley, TX",
+        "description": "Supervised 33 staff members across 100+ participants. Implemented Agile techniques and built training curriculum that improved team efficiency by 70%.",
+        "highlights": [
+          "Supervised 33 staff members with bimonthly 1:1 feedback",
+          "Maintained 90% programming delivery over 8-week session",
+          "Reduced meeting time by 15% using Agile techniques",
+          "Developed team-building curriculum for 7 units (75+ staff)",
+          "Achieved 70% efficiency gain through template and scheduling systems"
+        ],
+        "skills": ["Team Leadership", "Agile Methodology", "Program Management", "Staff Development"]
+      },
+      {
+        "id": "program-supervisor",
+        "title": "Program Supervisor",
+        "organization": "Camp Young Judaea - Texas",
+        "date": "June 2024 - August 2024",
+        "location": "Wimberley, TX",
+        "description": "Led cohort of 45 counselors-in-training, designing leadership development curriculum and coaching individual performance. Achieved 50% CIT-to-staff conversion rate.",
+        "highlights": [
+          "Led 45 counselors-in-training with educational focus on leadership and decision-making",
+          "Designed and facilitated workshops on conflict management and skills development",
+          "Provided regular 1:1 mentorship and performance coaching",
+          "Grew program participation and achieved 50% CIT-to-staff conversion rate"
+        ],
+        "skills": ["Mentorship", "Curriculum Design", "Leadership Development", "Coaching"]
+      },
+      {
+        "id": "transfer-ambassador",
+        "title": "Transfer Ambassador",
+        "organization": "University of North Texas",
+        "date": "August 2025 - July 2026",
+        "location": "Denton, TX",
+        "description": "Engaged and mentored 20+ transfer students weekly, launched retention programs, and supported onboarding for 100+ students across 4 orientation sessions.",
+        "highlights": [
+          "Mentored 20+ students on weekly basis, providing connections to 20+ resources",
+          "Launched 4-week activity series coordinating marketing, logistics, and programming",
+          "Supported onboarding for 100+ students across 4 yearly orientation sessions",
+          "Drove student connection and retention as part of 6-member team"
+        ],
+        "skills": ["Mentorship", "Student Engagement", "Program Coordination", "Resource Navigation"]
+      },
+      {
+        "id": "science-fair-mentor",
+        "title": "Science Fair Academy Mentor",
+        "organization": "Association for Young Scientists and Innovators",
+        "date": "September 2022 - April 2023",
+        "location": "Plano, Texas",
+        "description": "Mentored 2 high school computational biology projects, developing student analytical skills and competition technique. Paid forward my own science fair experience and passion.",
+        "highlights": [
+          "Mentored 2 high school computational biology projects",
+          "Developed analytical skills and competition technique",
+          "Shared expertise in research methodology and presentation"
+        ],
+        "skills": ["Mentorship", "Research Guidance", "Science Communication"]
+      },
+      {
+        "id": "management-fellow",
+        "title": "Management Fellow",
+        "organization": "Foundation for Jewish Camp",
+        "date": "March 2025 - August 2025",
+        "location": "United States",
+        "description": "Advanced leadership training seminar with expert workshops on management, facilitation, and feedback. Developed curriculum impacting 75+ staff members across 7 units.",
+        "highlights": [
+          "Engaged in leadership training seminar with expert workshops",
+          "Focused on management, facilitation, and accountability",
+          "Developed team-building and training curriculum for 75+ staff"
+        ],
+        "skills": ["Leadership Training", "Curriculum Development", "Facilitation"]
+      }
+    ],
+    "Operations & Experience": [
+      {
+        "id": "event-assistant",
+        "title": "Event Assistant",
+        "organization": "Camp Young Judaea - Texas",
+        "date": "August 2023 - April 2026",
+        "location": "Wimberley, TX",
+        "description": "Executed 5-7 yearly events ranging from 40 to 200+ participants. Coordinated logistics between staff, vendors, and guests while leading programming and activities.",
+        "highlights": [
+          "Supported execution of bar mitzvahs, family weekends, and special occasions",
+          "Managed on-site logistics for events spanning 3 days with 40-200+ participants",
+          "Led activities and programming for diverse guest populations",
+          "Coordinated between host staff, vendors, and event constituents"
+        ],
+        "skills": ["Event Management", "Logistics Coordination", "Cross-functional Communication"]
+      },
+      {
+        "id": "counselor",
+        "title": "Summer Camp Counselor",
+        "organization": "Camp Young Judaea - Texas",
+        "date": "June 2021 - August 2023",
+        "location": "Wimberley, TX",
+        "description": "Provided comprehensive care for campers, planned educational activities, and mentored junior staff. Recognized as Color War Captain and Counselor of the Week.",
+        "highlights": [
+          "Planned and led educational activities for all age groups",
+          "Provided full-time care (emotional, social, physical) for up to 16 girls",
+          "Mentored newer and junior staff on integration and best practices",
+          "Selected as Color War Captain (1 of 8 out of ~100 counselors)",
+          "Recognized as Counselor of the Week for standout performance"
+        ],
+        "skills": ["Program Planning", "Mentorship", "Crisis Management", "Emotional Intelligence"]
+      },
+      {
+        "id": "event-coordinator-ucsc",
+        "title": "Event Coordinator: Kresge Presents Pride",
+        "organization": "University of California, Santa Cruz",
+        "date": "January 2023 - April 2023",
+        "location": "Santa Cruz, CA",
+        "description": "Coordinated donations and marketing for 300+ participant festival. Led visual experience team in designing sustainable decorations and photo spaces on budget.",
+        "highlights": [
+          "Coordinated donations from university organizations and local businesses",
+          "Led Visual Experience team in design and assembly",
+          "Created innovative, sustainable, and budget-friendly decorations",
+          "Organized festival for 300+ participants"
+        ],
+        "skills": ["Event Planning", "Budget Management", "Vendor Relations", "Creative Problem Solving"]
+      },
+      {
+        "id": "hostess",
+        "title": "Hostess",
+        "organization": "The Capital Grille",
+        "date": "August 2023 - April 2024",
+        "location": "Dallas, TX",
+        "description": "Managed guest flow and reservations in high-volume fine dining setting. Assisted with event bookings and upselling for private dining events.",
+        "highlights": [
+          "Managed guest flow, reservations, and inquiries",
+          "Delivered exceptional customer service in high-volume environment",
+          "Assisted with private dining event booking and upselling",
+          "Balanced kitchen, guest, and service needs"
+        ],
+        "skills": ["Customer Service", "Reservation Management", "Event Sales"]
+      }
+    ]
+  },
+  "skills": {
+    "Product Management": {
+      "experiences": ["research", "drivetime"],
+      "proficiency": "Expert",
+      "description": "Requirements analysis, user research synthesis, product strategy, stakeholder communication"
+    },
+    "Data Analysis": {
+      "experiences": ["drivetime"],
+      "proficiency": "Advanced",
+      "description": "Statistical analysis, predictive modeling, data visualization, insights communication"
+    },
+    "Leadership": {
+      "experiences": ["transfer", "unit-manager", "program-supervisor", "management-fellow"],
+      "proficiency": "Advanced",
+      "description": "Team supervision, strategic planning, Agile methodology, organizational development"
+    },
+    "Mentorship": {
+      "experiences": ["transfer", "program-supervisor", "transfer-ambassador", "science-fair-mentor", "counselor"],
+      "proficiency": "Advanced",
+      "description": "1:1 coaching, skill development, career guidance, student support"
+    },
+    "Program Planning & Design": {
+      "experiences": ["transfer", "program-supervisor", "transfer-ambassador", "event-assistant", "counselor", "event-coordinator-ucsc"],
+      "proficiency": "Advanced",
+      "description": "Curriculum design, activity development, logistics planning, user experience"
+    },
+    "Communication & Presentation": {
+      "experiences": ["drivetime", "program-supervisor", "transfer"],
+      "proficiency": "Advanced",
+      "description": "Stakeholder communication, public speaking, written reports, visual storytelling"
+    },
+    "Python": {
+      "experiences": ["drivetime"],
+      "proficiency": "Advanced",
+      "description": "Data analysis, machine learning, automation"
+    },
+    "Cross-functional Collaboration": {
+      "experiences": ["research", "transfer", "unit-manager", "event-assistant", "drivetime"],
+      "proficiency": "Advanced",
+      "description": "Working across teams, vendor management, stakeholder alignment"
+    }
+  },
+  "education": [
+    {
+      "institution": "University of North Texas",
+      "degree": "Bachelor of Science in Data Science",
+      "date": "August 2024 - May 2027",
+      "gpa": "4.0",
+      "status": "In Progress",
+      "certifications": [
+        "AI Product Management Credential (Microsoft, In Progress)"
+      ]
+    },
+    {
+      "institution": "University of California, Santa Cruz",
+      "degree": "Molecular, Cellular, and Developmental Biology",
+      "date": "September 2022 - April 2023"
+    },
+    {
+      "institution": "Plano West Senior High School",
+      "degree": "High School Diploma",
+      "date": "August 2018 - May 2022"
+    }
+  ],
+  "honors": [
+    "Regeneron Science Talent Search - Top 300 Scholar",
+    "American Junior Academy of Science Fellow",
+    "TED-Ed Student Speaker",
+    "President's List (UNT)"
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Native or Bilingual" },
+    { "name": "Hebrew", "proficiency": "Limited Working" },
+    { "name": "Spanish", "proficiency": "Elementary" }
+  ]
+}

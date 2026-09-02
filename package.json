@@ -1,8 +1,9 @@
 {
-  "name": "sophie-portfolio",
-  "version": "0.1.0",
+  "name": "sophie4star-portfolio",
+  "version": "1.0.0",
+  "description": "Data Scientist & Product Manager Portfolio",
+  "homepage": "https://sophie4star.github.io/sophie4star-portfolio/",
   "private": true,
-  "homepage": "https://sophie4star.github.io",
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -11,8 +12,6 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

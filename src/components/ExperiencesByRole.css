@@ -1,0 +1,184 @@
+.experiences {
+  background: #f8f9fa;
+  padding: 4rem 2rem !important;
+}
+
+.roles-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.role-section {
+  margin-bottom: 3rem;
+}
+
+.role-title {
+  font-size: 1.8rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #667eea;
+  display: inline-block;
+}
+
+.experiences-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.experience-item {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.experience-item:hover {
+  box-shadow: 0 4px 16px rgba(102, 126, 234, 0.15);
+}
+
+.experience-header {
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background: #fafbfc;
+  border-left: 4px solid #667eea;
+  transition: background 0.3s ease;
+}
+
+.experience-header:hover {
+  background: #f0f2f8;
+}
+
+.exp-title-group h4 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.exp-org {
+  color: #667eea;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.exp-meta {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.exp-date {
+  color: #95a5a6;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.toggle-icon {
+  color: #667eea;
+  font-size: 0.8rem;
+  transition: transform 0.3s ease;
+}
+
+.toggle-icon.open {
+  transform: rotate(180deg);
+}
+
+.experience-details {
+  padding: 0 1.5rem 1.5rem;
+  border-top: 1px solid #ecf0f1;
+}
+
+.exp-description {
+  color: #34495e;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+}
+
+.exp-location {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.highlights {
+  margin-bottom: 1.5rem;
+}
+
+.highlights h5,
+.skills-section h5 {
+  color: #2c3e50;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+
+.highlights ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlights li {
+  color: #555;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.highlights li:before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.skills-section {
+  padding-top: 1rem;
+  border-top: 1px solid #ecf0f1;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .experiences {
+    padding: 2rem 1rem !important;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .role-title {
+    font-size: 1.4rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .exp-meta {
+    align-items: flex-start;
+  }
+
+  .exp-title-group h4 {
+    font-size: 1.1rem;
+  }
+}

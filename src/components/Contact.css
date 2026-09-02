@@ -1,0 +1,139 @@
+.contact-section {
+  background: #2c3e50;
+  color: white;
+  padding: 4rem 2rem !important;
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.contact-column h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #667eea;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.contact-column p {
+  color: #ecf0f1;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-link {
+  color: #667eea;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.contact-link:hover {
+  color: #a0aec0;
+  transform: translateX(5px);
+}
+
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.edu-item {
+  border-left: 3px solid #667eea;
+  padding-left: 1rem;
+}
+
+.edu-degree {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.3rem;
+}
+
+.edu-institution {
+  color: #bdc3c7;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.edu-meta {
+  font-size: 0.85rem;
+  color: #95a5a6;
+}
+
+.honors-list {
+  list-style: none;
+  padding: 0;
+}
+
+.honors-list li {
+  color: #ecf0f1;
+  margin-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+.honors-list li:before {
+  content: "★";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+}
+
+.languages-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.language-item {
+  border-left: 3px solid #667eea;
+  padding-left: 1rem;
+}
+
+.language-name {
+  font-weight: 600;
+  color: white;
+  margin-bottom: 0.2rem;
+}
+
+.language-proficiency {
+  color: #bdc3c7;
+  font-size: 0.9rem;
+}
+
+.footer {
+  text-align: center;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: #95a5a6;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 2rem 1rem !important;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-column h3 {
+    font-size: 1.1rem;
+  }
+}

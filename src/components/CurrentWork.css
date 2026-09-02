@@ -1,0 +1,133 @@
+.current-work {
+  background: white;
+  padding: 4rem 2rem !important;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #7f8c8d;
+}
+
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-card {
+  background: #f8f9fa;
+  border-left: 4px solid #667eea;
+  padding: 2rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.1);
+}
+
+.work-header h3 {
+  font-size: 1.4rem;
+  color: #2c3e50;
+  margin-bottom: 0.3rem;
+}
+
+.organization {
+  color: #667eea;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+}
+
+.date {
+  color: #95a5a6;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #34495e;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+}
+
+.highlights {
+  margin-bottom: 1.5rem;
+}
+
+.highlights h4 {
+  color: #2c3e50;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.highlights ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.highlights li {
+  color: #555;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.highlights li:before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #667eea;
+  font-weight: bold;
+}
+
+.skills-section {
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.skills-section h4 {
+  color: #2c3e50;
+  font-size: 0.95rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .current-work {
+    padding: 2rem 1rem !important;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .work-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
