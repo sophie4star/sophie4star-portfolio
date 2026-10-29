@@ -1,0 +1,226 @@
+---
+title: "FinalReport-srk0219(c)"
+output: html_document
+date: "2024-11-15"
+---
+
+```{r setup, include=FALSE}
+library("knitr")
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Load in dataset and statistical summary
+
+```{r}
+##https://www.kaggle.com/datasets/lashagoch/life-expectancy-who-updated
+
+library(readr)
+setwd("C:\\Users\\sophi\\OneDrive\\Documents\\ClassAssignments\\Data Science\\Final Project")
+life_expectancy <- read_csv("Life-Expectancy-Data-Updated.csv")
+View(life_expectancy)
+
+life_expectancy <- na.omit(life_expectancy)
+life_expectancy$Status <- ifelse(life_expectancy$Economy_status_Developed == 1, "Developed", "Developing")
+summary(life_expectancy)
+View(life_expectancy)
+
+```
+
+## Categorizing Datasets & Finding Other Information
+
+```{r}
+      
+library("dplyr")
+
+#Create dataset for only year 2012
+Year2012 <- filter(life_expectancy, Year == "2012")
+View(Year2012)
+
+#Create dataset for only year 2002
+Year2002 <- filter(life_expectancy, Year == 2002)
+View(Year2002)
+
+#Check distribution of country status
+Developing2002 <- sum(Year2002$Status == "Developing")
+Developed2002 <- sum(Year2002$Status == "Developed")
+Countries2012 <- unique(Year2012$Country)
+Developed2012 <- sum(Year2012$Status == "Developed")
+Developing2012 <- sum(Year2012$Status == "Developing")
+Developed2012
+Developing2012
+
+```
+
+## Visualization Plot 1 + 2
+
+```{r}
+
+###Life Expectancy Differences: 
+#1: Average life expectancy in 2002 and 2012 for developing and developed countries to show change over 10 year period and difference
+    #between developed and developing countries
+#2: Change in life expectancy 2000-2015 by region
+      
+
+library("ggplot2")
+
+TenYr <- filter(life_expectancy, Year == 2012 | Year == 2002)
+View(TenYr)
+
+TenYrLife <- TenYr %>% group_by(Year, Status) %>% summarise(Avg_Life = mean(`Life_expectancy`), SD = sd(Life_expectancy))
+View(TenYrLife)
+
+TenYrLife <- mutate(TenYrLife, Label = paste0(Year, Status))
+
+ggplot(TenYrLife, aes(x = Label, y = Avg_Life, fill = Status)) + geom_bar(stat = "identity") + geom_errorbar(aes(ymin = Avg_Life - SD, ymax = Avg_Life + SD)) + geom_text(aes(label = paste0("±", round(SD, 2)), y = Avg_Life + SD + 0.5)) + labs(x = "Year and Country Status", y = "Average Life Expectancy", title = "10 Year Difference (2002 -- 2012) in Life Expectancy Between Developed and Developing Countries") + theme_minimal()
+
+#Calculate Average Life Expectancy by Region Per Year
+Avg_Life_Region <- life_expectancy %>% group_by(Region, Year) %>% summarize(Average_LE = mean(Life_expectancy))
+View(Avg_Life_Region)
+ggplot(Avg_Life_Region, aes(x = Year, y = Average_LE, color = Region)) + geom_line(size = 2) + labs(x = "Year", y = "Average Life Expectancy", title = "Average Life Expectancy by Region, 2000-2015")
+
+```
+
+## Visualization Plot 3
+
+```{r}
+
+ggplot(Year2002, aes(x = BMI, color = Region)) + geom_histogram() + facet_wrap(~Region) + labs(y = "Frequency", title = "Frequency of Average BMI in 2002 by Country")
+ggplot(Year2012, aes(x = BMI, color = Region)) + geom_histogram() + facet_wrap(~Region) + labs(y = "Frequency", title = "Frequency of Average BMI in 2012 by Country")
+
+```
+
+## Visualization Plot 4
+
+```{r}
+
+x_limits <- c(0, 150) 
+y_limits <- c(0, 800) 
+
+ggplot(Year2002, aes(x = Infant_deaths, y = Adult_mortality, color = Status)) + geom_point() + labs(x = "Infant Death Rate", y = "Adult Mortality Rate", title = "Infant Death vs Adult Mortality Rate by Development Status, 2002") + scale_x_continuous(breaks = seq(0, 150, by = 25), limits = x_limits) + scale_y_continuous(breaks = seq(0, 800, by = 100), limits = y_limits)
+
+ggplot(Year2012, aes(x = Infant_deaths, y = Adult_mortality, color = Status)) + geom_point() + labs(x = "Infant Death Rate", y = "Adult Mortality Rate", title = "Infant Death vs Adult Mortality Rate by Development Status, 2012") + scale_x_continuous(breaks = seq(0, 150, by = 25), limits = x_limits) + scale_y_continuous(breaks = seq(0, 800, by = 100), limits = y_limits)
+
+```
+
+## Statistical Test 1 - T Test
+
+```{r}
+
+t.test(Life_expectancy~Status, data = life_expectancy)
+
+```
+
+## Statistical Test 2 - Correlation Test
+
+```{r}
+
+library("GGally")
+ggpairs(life_expectancy, columns = c(6, 7, 13, 14, 21))
+
+```
+
+## Model 1
+
+```{r}
+
+Life_Model <- lm(formula = Life_expectancy~GDP_per_capita + Schooling + BMI + Alcohol_consumption, data = life_expectancy)
+Life_Model
+
+summary(Life_Model)
+
+predictions <- predict(Life_Model, newdata = life_expectancy)
+
+mae <- mean(abs(life_expectancy$Life_expectancy - predictions))
+mae
+
+plot(life_expectancy$Life_expectancy, predictions, xlab = "Observed Life Expectancy", ylab = "Predicted Life Expectancy", main = "Actual vs Predicted Life Expectancy by Country, 2000-2015")
+abline(0, 1, col = "red")
+
+
+```
+
+## Model 2
+
+```{r}
+
+library("caret")
+
+sample_size_glm <- floor(0.8 * nrow(life_expectancy))
+sample_size_glm
+
+#Index of training samples
+train_index_glm <- sample(seq_len(nrow(life_expectancy)), 
+                      size = sample_size_glm)
+
+#Generate training and testing datasets
+train_glm <- life_expectancy[train_index_glm,]
+test_glm <- life_expectancy[-train_index_glm,]
+head(train_glm)
+head(test_glm)
+
+#Train model
+Status_Model <- glm(Economy_status_Developed~Hepatitis_B+Measles+Polio+Diphtheria+Thinness_ten_nineteen_years+Thinness_five_nine_years+GDP_per_capita, family = binomial(link = "logit"), data = train_glm)
+summary(Status_Model)
+
+#Run prediction and convert to probability of status, where 1 = developed, 0 = developing
+predicted_probs <- predict(Status_Model, newdata = test_glm, type = "response")
+predicted_status <- ifelse(predicted_probs > 0.5, 1, 0)
+
+#Analyse prediction using confusion matrix (true pos, true neg, false pos, false neg) + accuracy given by matrix
+confusion_matrix <- table(Predicted = predicted_status, Actual = test_glm$Economy_status_Developed)
+print(confusion_matrix)
+
+```
+
+## Model 3 
+
+```{r}
+
+library("randomForest")
+
+sample_size_rf <- floor(0.6 * nrow(life_expectancy))
+sample_size_rf
+
+train_index_rf <- sample(seq_len(nrow(life_expectancy)), size = sample_size_rf)
+train_rf <- life_expectancy[train_index_rf, ]
+test_rf <- life_expectancy[-train_index_rf, ]
+
+fitControl <- trainControl(method = "repeatedcv", number = 5)
+
+rf_model <- train(Life_expectancy ~ Infant_deaths + Incidents_HIV + Adult_mortality + GDP_per_capita,
+                         data = train_rf, method = "rf", trControl = fitControl, ntree = 100)
+
+rf_predictions <- predict(rf_model, newdata = test_rf)
+
+mse <- mean((rf_predictions - test_rf$Life_expectancy)^2)
+rmse <- sqrt(mse)
+rmse
+
+importance_rf <- varImp(rf_model, scale = TRUE)  # Scale ensures relative importance
+print(importance_rf)
+
+```
+
+## Model 4 
+
+```{r}
+
+library("e1071")
+
+life_expectancy$Status <- as.factor(life_expectancy$Status)
+
+set.seed(123)  
+train_indices_svm <- sample(1:nrow(life_expectancy), size = 0.7 * nrow(life_expectancy))
+train_data_svm <- life_expectancy[train_indices_svm, ]
+test_data_svm <- life_expectancy[-train_indices_svm, ]
+
+svm_model <- svm(Status ~ Schooling + BMI + Alcohol_consumption + Measles, data = train_data_svm,
+  kernel = "polynomial", cost = 1, scale = TRUE)
+
+svm_predictions <- predict(svm_model, newdata = test_data_svm)
+
+confusion_svm <- confusionMatrix(svm_predictions, test_data_svm$Status)
+print(confusion_svm)
+
+
+```
