@@ -1,0 +1,192 @@
+---
+title: "BIOL4815-srk0219(a)"
+output: html_document
+date: "2025-04-26"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Import and load necessary packages
+
+```{r}
+
+library("DECIPHER") #MSA
+library("ape") #Phylogenetic trees
+library("cubar") #codon usage bias
+library("Biostrings") #handling and manipulating sequences
+library("ggplot2") #data visualizations
+library("ggrepel") ##data visualizations
+library("phangorn") #phylogenetic trees
+
+```
+## Multiple Sequence Alignment 
+
+```{r}
+sequences <- readAAStringSet("C:\\Users\\sophi\\OneDrive\\Documents\\ClassAssignments\\BIOL4815\\projectfastaproteinseq.txt")
+  class(sequences)
+sequences ##Read in all sequences in FASTA format to AAStringSet object, and verify process
+
+aligned <- AlignSeqs(sequences) ##Align sequences and store as AAStringSetObject
+  class(aligned)
+BrowseSeqs(aligned, title = "Cross-Domain MSA") ##Load webpage of MSA 
+
+aa_prokaryotic <- readAAStringSet("C:\\Users\\sophi\\OneDrive\\Documents\\ClassAssignments\\BIOL4815\\aa_prokaryotic.txt")
+aligned_prokaryotes <- AlignSeqs(aa_prokaryotic)
+BrowseSeqs(aligned_prokaryotes, title = "MSA of Prokaryotes")
+
+aa_eukaryotic <- readAAStringSet("C:\\Users\\sophi\\OneDrive\\Documents\\ClassAssignments\\BIOL4815\\aa_eukaryotic.txt")
+aligned_eukaryotes <- AlignSeqs(aa_eukaryotic)
+BrowseSeqs(aligned_eukaryotes, title = "MSA of Eukaryotes")
+
+```
+
+## Distance Matrix and Principal Component Analysis
+
+```{r}
+
+dists <- DistanceMatrix(aligned, type = "matrix", correction = "Poisson") #DECIPHER
+View(dists) ##Create distance matrix with Poisson correction method
+class(dists)
+
+max_dist <- max(dists, na.rm = TRUE)
+print(max_dist)
+
+write.csv(dists, "dists.csv")
+
+##Perform Principal Component Analysis - base R
+pca_result <- prcomp(dists, scale. = TRUE)
+
+# Create a data frame from PCA results
+pca_df <- data.frame(
+  PC1 = pca_result$x[,1],
+  PC2 = pca_result$x[,2],
+  Label = rownames(dists) 
+)
+class(pca_df)
+
+# Plot using ggplot2
+ggplot(pca_df, aes(x = PC1, y = PC2, label = Label)) +
+  geom_point(color = "blue", size = 2) +
+  geom_text_repel(size = 3, box.padding = 0.4, point.padding = 0.3, max.overlaps = 50) +
+  theme_minimal() +
+  labs(title = "PCA of Sequence Distances",
+       x = "PC1", y = "PC2")
+
+summary(pca_result)
+head(pca_result$x)
+
+```
+
+##Phylogenetic Tree 
+
+```{r} 
+
+set.seed(42)
+
+tree_upgma <- upgma(dists)
+plot(tree_upgma, main = "UPGMA Phylogenetic Tree")
+
+bootstrap_trees <- boot.phylo(tree_upgma, dists, FUN = function(xx) upgma(dist.aa(xx)), B = 100, trees = TRUE)
+print(bootstrap_trees) ##Run bootstrapping of the tree w given distance matrix using 100 iterations and UPGMA formula
+
+consensus_tree <- consensus(bootstrap_trees$trees, p = 0.39, check.labels = TRUE, rooted = TRUE)
+consensus_tree <- addConfidences(consensus_tree, bootstrap_trees$trees)
+
+# Add to plot
+plot(consensus_tree, main="Bootstrap Consensus Tree- UPGMA", type="phylogram", cex = 0.8, cex.lab = 1.5, show.tip.label = TRUE)
+nodelabels(consensus_tree$node.label, frame = "none", cex = 0.8, cex.lab = 1.5, col = "red")
+
+tree_nj <- nj(dists)
+plot(tree_nj, main = "Neighbor Joining Phylogenetic Tree")
+
+nj_bootstrap_trees <- boot.phylo(tree_nj, dists, FUN = function(xx) nj(dist.aa(xx)), B = 100, trees = TRUE)
+print(nj_bootstrap_trees) ##Run bootstrapping of the tree w given distance matrix using 100 iterations and UPGMA formula
+
+nj_consensus_tree <- consensus(nj_bootstrap_trees$trees, p = 0.45, check.labels = TRUE, rooted = FALSE)
+nj_consensus_tree <- addConfidences(nj_consensus_tree, nj_bootstrap_trees$trees)
+
+# Add to plot
+plot(nj_consensus_tree, main="Bootstrap Consensus Tree- Neighbor-Joining", type="phylogram", cex = 0.8, cex.lab = 1.5, show.tip.label = TRUE)
+nodelabels(nj_consensus_tree$node.label, frame = "none", cex = 0.8, cex.lab = 1.5, col = "red")
+
+```
+
+##GC Content Analysis
+
+```{r}
+
+dna_sequences <- readDNAStringSet("C:\\Users\\sophi\\OneDrive\\Documents\\ClassAssignments\\BIOL4815\\projectfastadnaseq.txt")
+  print(dna_sequences)
+gc_content <- letterFrequency(dna_sequences, letters = c("G", "C"), as.prob=TRUE)
+gc_total <- rowSums(gc_content)
+print(gc_total)
+summary(gc_total)
+
+max_gc <- which.max(gc_total)
+cat("Highest GC content is in ", names(dna_sequences)[max_gc])
+
+dna_prokaryotic <- readDNAStringSet("C:\\Users\\sophi\\OneDrive\\Documents\\ClassAssignments\\BIOL4815\\dna_prokaryotic.txt")
+dna_eukaryotic <- readDNAStringSet("C:\\Users\\sophi\\OneDrive\\Documents\\ClassAssignments\\BIOL4815\\dna_eukaryotic.txt")
+
+gc_prok <- rowSums(letterFrequency(dna_prokaryotic, c("G", "C"), as.prob=TRUE)) * 100
+gc_euk <- rowSums(letterFrequency(dna_eukaryotic, c("G", "C"), as.prob=TRUE)) * 100
+
+gc_data <- data.frame(
+  GC_Content = c(gc_prok, gc_euk),
+  Group = c(rep("Prokaryotes", length(gc_prok)), rep("Eukaryotes", length(gc_euk)))
+)
+
+ggplot(gc_data, aes(x=Group, y=GC_Content, fill=Group)) +
+  geom_boxplot() +
+  scale_y_continuous(limits = c(0, 100))+  # Y-axis from 0 to 1
+
+  theme_minimal() +
+  labs(title="GC Content Comparison", y="GC Content (%)") 
+
+t.test(gc_prok, gc_euk)
+
+```
+
+
+## Codon Usage Bias
+
+```{r}
+
+cds_prokaryotic <- readDNAStringSet("C:\\Users\\sophi\\OneDrive\\Documents\\ClassAssignments\\BIOL4815\\cds_prokaryotic.txt")
+seq_prokaryotic <- as.character(cds_prokaryotic)
+
+cds_eukaryotic <-  readDNAStringSet("C:\\Users\\sophi\\OneDrive\\Documents\\ClassAssignments\\BIOL4815\\cds_eukaryotic.txt")
+seq_eukaryotic <- as.character(cds_eukaryotic)
+
+# Function to clean sequences
+clean_seqs <- function(seqs) {
+  seqs <- toupper(seqs)
+  seqs <- seqs[nchar(seqs) %% 3 == 0]  # Keep sequences with length divisible by 3
+  return(seqs)
+}
+
+# Clean sequences
+seqs_prok_clean <- clean_seqs(seq_prokaryotic)
+seqs_euk_clean  <- clean_seqs(seq_eukaryotic)
+
+codon_prok <- count_codons(seqs_prok_clean)
+codon_euk <- count_codons(seqs_euk_clean)
+
+rscu_prok <- est_rscu(codon_prok)
+rscu_euk  <- est_rscu(codon_euk)
+
+# Merge RSCU data frames
+rscu_combined <- merge(rscu_prok, rscu_euk, by = "codon", suffixes = c("_prok", "_euk"))
+
+ggplot(rscu_combined, aes(x = rscu_prok, y = rscu_euk, label = codon)) +
+  geom_point(color = "darkblue") +
+  geom_text(size = 2, vjust = -0.7) +
+  geom_abline(slope = 1, intercept = 0, linetype = "dashed", color = "red") +
+  labs(title = "Relative Synonymous Codon Usage, Thermophilic Prokaryotes and Mesophilic Eukaryotes",
+       x = "Prokaryotes RSCU",
+       y = "Eukaryotes RSCU") +
+  theme_minimal()
+
+```
