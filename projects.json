@@ -19,7 +19,7 @@
     "business_context": "Summer camp operations and administration",
     "status": "complete",
     "evidence_level": "built",
-    "visibility": "private",
+    "visibility": "public",
     "featured": false,
     "tags": [
       "MySQL",
