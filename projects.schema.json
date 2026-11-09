@@ -125,8 +125,7 @@
     },
     "industry": {
       "enum": [
-        "Human resources & recruiting",
-        "Education (STEM competitions)",
+        "Education",
         "Public health & global development",
         "Life sciences research",
         "Automotive safety & mobility",
