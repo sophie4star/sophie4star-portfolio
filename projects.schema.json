@@ -1,0 +1,589 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/portfolio-project.schema.json",
+  "title": "Portfolio project (v2.2)",
+  "description": "One record per project. Artifacts link to a project through the first token of their filename (file_prefix). Skills, tools, techniques, and competencies use a controlled vocabulary so projects filter cleanly. Outcomes are measurable results in a business context. Top-5 ranking: items shown in more artifact types rank higher; ties go to the item most central to the project.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "project_id",
+    "title",
+    "short_name",
+    "file_prefix",
+    "summary",
+    "context",
+    "domain",
+    "industry",
+    "business_context",
+    "status",
+    "evidence_level",
+    "visibility",
+    "featured",
+    "skills",
+    "tools",
+    "techniques",
+    "competencies",
+    "outcomes",
+    "artifacts"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": "2.2"
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "title": {
+      "type": "string"
+    },
+    "short_name": {
+      "type": "string"
+    },
+    "file_prefix": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "summary": {
+      "type": "string",
+      "maxLength": 280
+    },
+    "context": {
+      "type": "object",
+      "required": [
+        "type",
+        "team_size"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "type": {
+          "enum": [
+            "course",
+            "high_school",
+            "competition",
+            "hackathon",
+            "case_competition",
+            "program",
+            "personal",
+            "independent_research"
+          ]
+        },
+        "course_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "institution": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "term": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "team_size": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 1
+        },
+        "role": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "affiliation": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "Where the work was done, if it links to a role in Experience. Shown in the project footer."
+        }
+      }
+    },
+    "domain": {
+      "enum": [
+        "Bioinformatics & computational biology",
+        "Data engineering & databases",
+        "Data science & machine learning",
+        "Embedded systems & hardware",
+        "Engineering & simulation",
+        "Operations, strategy & programs",
+        "Product management & commercialization",
+        "Web development"
+      ]
+    },
+    "industry": {
+      "enum": [
+        "Human resources & recruiting",
+        "Education (STEM competitions)",
+        "Public health & global development",
+        "Life sciences research",
+        "Automotive safety & mobility",
+        "Sports technology",
+        "Healthcare & medical devices",
+        "Gaming & online communities",
+        "Consumer products",
+        "Youth camps & recreation",
+        "Personal branding & professional services"
+      ]
+    },
+    "business_context": {
+      "type": "string",
+      "description": "Who the outcome matters to, in one phrase."
+    },
+    "status": {
+      "enum": [
+        "complete",
+        "in_progress",
+        "proposal"
+      ]
+    },
+    "evidence_level": {
+      "enum": [
+        "built",
+        "applied",
+        "claimed"
+      ]
+    },
+    "visibility": {
+      "enum": [
+        "public",
+        "private",
+        "unlisted"
+      ]
+    },
+    "featured": {
+      "type": "boolean"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "skills": {
+      "type": "array",
+      "maxItems": 5,
+      "description": "Top 5 skills in rank order, drawn from the controlled vocabulary. Fewer than 5 is allowed.",
+      "items": {
+        "type": "object",
+        "required": [
+          "rank",
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "name": {
+            "enum": [
+              "Requirements analysis",
+              "Data modeling",
+              "Data cleaning and validation",
+              "Exploratory data analysis",
+              "Statistical analysis",
+              "Predictive modeling",
+              "Data visualization",
+              "Experimental design",
+              "Hypothesis-driven research",
+              "Embedded prototyping",
+              "Technical writing",
+              "Presentation and pitching",
+              "Product strategy",
+              "Market analysis",
+              "Financial planning",
+              "Team leadership",
+              "Systems engineering",
+              "Simulation modeling",
+              "Bioinformatics analysis",
+              "Web development",
+              "Problem framing",
+              "User research",
+              "Brand strategy",
+              "Go-to-market planning",
+              "Operations strategy",
+              "Program design",
+              "Risk management"
+            ]
+          }
+        }
+      }
+    },
+    "tools": {
+      "type": "array",
+      "maxItems": 5,
+      "description": "Top 5 tools in rank order, drawn from the controlled vocabulary. Fewer than 5 is allowed.",
+      "items": {
+        "type": "object",
+        "required": [
+          "rank",
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "name": {
+            "enum": [
+              "Python",
+              "R",
+              "SQL (MySQL)",
+              "MySQL Workbench",
+              "Excel",
+              "Microsoft Word",
+              "Jupyter",
+              "Google Colab",
+              "pandas",
+              "scikit-learn",
+              "Matplotlib",
+              "Seaborn",
+              "ggplot2",
+              "dplyr",
+              "caret",
+              "Bioconductor",
+              "ape",
+              "phangorn",
+              "Arduino",
+              "Visuino",
+              "Sensors and circuits",
+              "MagicDraw (SysML)",
+              "LS-DYNA",
+              "Git",
+              "React"
+            ]
+          }
+        }
+      }
+    },
+    "techniques": {
+      "type": "array",
+      "maxItems": 5,
+      "description": "Top 5 techniques in rank order, drawn from the controlled vocabulary. Fewer than 5 is allowed.",
+      "items": {
+        "type": "object",
+        "required": [
+          "rank",
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "name": {
+            "enum": [
+              "Regression analysis",
+              "Logistic regression",
+              "Random forest classification",
+              "Clustering",
+              "Principal component analysis (PCA)",
+              "Hypothesis testing",
+              "Model evaluation",
+              "Keyword text analysis",
+              "Rule-based data validation",
+              "Trend analysis",
+              "Relational joins and aggregation",
+              "Sequence alignment",
+              "Phylogenetic tree construction",
+              "Sensor calibration",
+              "Systems design",
+              "Finite element simulation",
+              "Before-and-after comparison",
+              "Demand forecasting",
+              "Market sizing (TAM, SAM, SOM)",
+              "KPI and ROI analysis",
+              "Gamification",
+              "Component-based UI design",
+              "SWOT analysis",
+              "Gap analysis"
+            ]
+          }
+        }
+      }
+    },
+    "competencies": {
+      "type": "array",
+      "maxItems": 5,
+      "description": "Top 5 competencies in rank order, drawn from the controlled vocabulary. Fewer than 5 is allowed.",
+      "items": {
+        "type": "object",
+        "required": [
+          "rank",
+          "name"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "name": {
+            "enum": [
+              "Data-driven decision making",
+              "Predictive analytics",
+              "Technical communication",
+              "Product management",
+              "Business strategy",
+              "Embedded systems design",
+              "Systems engineering",
+              "Team leadership",
+              "Database design",
+              "Computational biology research",
+              "Human-centered design",
+              "Hardware-software integration",
+              "Trust and safety design",
+              "Personal branding"
+            ]
+          }
+        }
+      }
+    },
+    "outcomes": {
+      "type": "array",
+      "maxItems": 5,
+      "description": "Top 5 measurable outcomes in a business context, in rank order.",
+      "items": {
+        "type": "object",
+        "required": [
+          "rank",
+          "name",
+          "measure_type",
+          "value",
+          "basis",
+          "source"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "rank": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 5
+          },
+          "name": {
+            "type": "string",
+            "description": "Outcome statement in plain words."
+          },
+          "measure_type": {
+            "enum": [
+              "model_performance",
+              "statistical_result",
+              "simulated_result",
+              "prototype_performance",
+              "requirements_met",
+              "data_quality",
+              "operational_capacity",
+              "operational_reporting",
+              "market_sizing",
+              "business_target",
+              "delivery_milestone",
+              "case_metric",
+              "competition_result",
+              "funding_secured"
+            ]
+          },
+          "value": {
+            "type": "string",
+            "description": "The number or result, with units."
+          },
+          "basis": {
+            "enum": [
+              "measured",
+              "sample_data",
+              "simulated",
+              "planned",
+              "case_material",
+              "delivered",
+              "awarded"
+            ],
+            "description": "measured = from real data; sample_data = from example or synthetic data; simulated; planned = target; case_material = from a case; delivered = built or shipped."
+          },
+          "source": {
+            "type": "string",
+            "description": "Artifact filename that supports the outcome, or 'owner-provided'."
+          },
+          "show_basis": {
+            "type": "boolean",
+            "description": "Set false to hide the basis label on this finding."
+          }
+        }
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "artifact_id",
+          "filename",
+          "artifact_type",
+          "format",
+          "prefix_source"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "artifact_id": {
+            "type": "string"
+          },
+          "filename": {
+            "type": "string"
+          },
+          "artifact_type": {
+            "enum": [
+              "project_report",
+              "research_paper",
+              "presentation_deck",
+              "pitch_deck",
+              "case_study_deck",
+              "project_code",
+              "notebook",
+              "branding_guidelines",
+              "dataset",
+              "sequence_data",
+              "source_package",
+              "readme"
+            ]
+          },
+          "format": {
+            "type": "string"
+          },
+          "sequence": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "sequence_total": {
+            "type": [
+              "integer",
+              "null"
+            ],
+            "minimum": 1
+          },
+          "prefix_source": {
+            "enum": [
+              "filename",
+              "folder",
+              "none"
+            ]
+          },
+          "notes": {
+            "type": [
+              "string",
+              "null"
+            ]
+          }
+        }
+      }
+    },
+    "problem": {
+      "type": "string",
+      "description": "The business problem, in plain words."
+    },
+    "approach": {
+      "type": "string",
+      "description": "What was done, in plain words."
+    },
+    "limitations": {
+      "type": "string",
+      "description": "Honest caveat shown on the project page."
+    },
+    "image": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "description": "Path to a picture of the project, relative to the site folder. Taken from the project's own deck."
+    },
+    "awards": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Competition and academic awards for this project, one string each."
+    },
+    "figures": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "image",
+          "caption",
+          "source"
+        ],
+        "properties": {
+          "image": {
+            "type": "string",
+            "description": "Path to the figure image, relative to the site folder."
+          },
+          "caption": {
+            "type": "string",
+            "description": "What the figure shows."
+          },
+          "source": {
+            "type": "string",
+            "description": "Where the figure came from, e.g. the deck or report and page."
+          }
+        }
+      },
+      "description": "Key figures from the project's own files, shown in the project dialog."
+    },
+    "related": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "project_id",
+          "relation"
+        ],
+        "properties": {
+          "project_id": {
+            "type": "string",
+            "description": "The other project this one connects to."
+          },
+          "relation": {
+            "type": "string",
+            "description": "One sentence on how the two projects connect."
+          },
+          "label": {
+            "type": "string",
+            "description": "Optional button text for the connected project."
+          }
+        }
+      },
+      "description": "Other projects this one builds on or leads to, shown in the project dialog."
+    },
+    "flagship": {
+      "type": "boolean",
+      "description": "True for the strongest projects; they lead the default order."
+    },
+    "headline": {
+      "type": "string",
+      "maxLength": 200,
+      "description": "The headline outcome, shown on the project card above the summary."
+    }
+  }
+}

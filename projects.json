@@ -1,0 +1,2028 @@
+[
+  {
+    "schema_version": "2.2",
+    "project_id": "camp-dbms",
+    "title": "Summer Camp Management System",
+    "short_name": "Camp DBMS",
+    "file_prefix": "CampDBMS",
+    "summary": "Relational database for a summer camp: 14 MySQL tables, business rules, and four analytical queries.",
+    "context": {
+      "type": "course",
+      "course_code": "INFO 4707.401",
+      "institution": "University of North Texas",
+      "term": "Fall 2025",
+      "team_size": 1,
+      "role": "Sole author"
+    },
+    "domain": "Data engineering & databases",
+    "industry": "Youth camps & recreation",
+    "business_context": "Summer camp operations and administration",
+    "status": "complete",
+    "evidence_level": "built",
+    "visibility": "private",
+    "featured": false,
+    "tags": [
+      "MySQL",
+      "database design",
+      "SQL"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Requirements analysis"
+      },
+      {
+        "rank": 2,
+        "name": "Data modeling"
+      },
+      {
+        "rank": 3,
+        "name": "Data cleaning and validation"
+      },
+      {
+        "rank": 4,
+        "name": "Technical writing"
+      }
+    ],
+    "tools": [
+      {
+        "rank": 1,
+        "name": "SQL (MySQL)"
+      },
+      {
+        "rank": 2,
+        "name": "MySQL Workbench"
+      },
+      {
+        "rank": 3,
+        "name": "Excel"
+      },
+      {
+        "rank": 4,
+        "name": "Microsoft Word"
+      }
+    ],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Relational joins and aggregation"
+      },
+      {
+        "rank": 2,
+        "name": "Rule-based data validation"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Database design"
+      },
+      {
+        "rank": 2,
+        "name": "Data-driven decision making"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Computed 324 camper beds and 88 staff beds across active cabins",
+        "measure_type": "operational_capacity",
+        "value": "324 camper / 88 staff",
+        "basis": "sample_data",
+        "source": "CampDBMS_DataWarehousing_ProjectReport_1o1.pdf"
+      },
+      {
+        "rank": 2,
+        "name": "Answered four management questions with one SQL query each",
+        "measure_type": "operational_reporting",
+        "value": "4 queries",
+        "basis": "sample_data",
+        "source": "CampDBMS_DataWarehousing_ProjectReport_1o1.pdf"
+      },
+      {
+        "rank": 3,
+        "name": "Linked 14 tables and documented 10 business rules",
+        "measure_type": "data_quality",
+        "value": "14 tables, 10 rules",
+        "basis": "delivered",
+        "source": "CampDBMS_DataWarehousing_ProjectReport_1o1.pdf"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "CampDBMS_DataWarehousing_ProjectReport_1o1",
+        "filename": "CampDBMS_DataWarehousing_ProjectReport_1o1.pdf",
+        "artifact_type": "project_report",
+        "format": "pdf",
+        "sequence": 1,
+        "sequence_total": 1,
+        "prefix_source": "filename",
+        "notes": "Zip copy was 0 bytes; this is the re-attached 27-page PDF."
+      }
+    ],
+    "problem": "Camp records live in separate systems for staff, campers, payroll, health, and logistics, which makes it hard to see the whole operation or compare it year to year.",
+    "approach": "Designed and built a 14-table relational database in MySQL with documented business rules. Loaded it from CSV and wrote queries that answer real management questions.",
+    "limitations": "Built and tested on sample data. The report labels all figures as examples.",
+    "flagship": false
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "jobcallbacks",
+    "title": "Predicting Job Callbacks Using Resume Data",
+    "short_name": "JobCallbacks",
+    "file_prefix": "JobCallbacks",
+    "summary": "Statistically sound ML study of which resume features relate to interview callbacks, using a synthetic dataset.",
+    "context": {
+      "type": "course",
+      "course_code": "DTSC4050.020",
+      "institution": "University of North Texas",
+      "term": "Fall 2025",
+      "team_size": 3,
+      "role": "Team lead (per filename; confirm)"
+    },
+    "domain": "Data science & machine learning",
+    "industry": "Human resources & recruiting",
+    "business_context": "HR and recruiting: screening analytics",
+    "status": "complete",
+    "evidence_level": "built",
+    "visibility": "public",
+    "featured": true,
+    "tags": [
+      "machine learning",
+      "statistics",
+      "team project"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Statistical analysis"
+      },
+      {
+        "rank": 2,
+        "name": "Predictive modeling"
+      },
+      {
+        "rank": 3,
+        "name": "Data cleaning and validation"
+      },
+      {
+        "rank": 4,
+        "name": "Exploratory data analysis"
+      },
+      {
+        "rank": 5,
+        "name": "Technical writing"
+      }
+    ],
+    "tools": [
+      {
+        "rank": 1,
+        "name": "Python"
+      },
+      {
+        "rank": 2,
+        "name": "scikit-learn"
+      },
+      {
+        "rank": 3,
+        "name": "pandas"
+      },
+      {
+        "rank": 4,
+        "name": "Jupyter"
+      },
+      {
+        "rank": 5,
+        "name": "Google Colab"
+      }
+    ],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Random forest classification"
+      },
+      {
+        "rank": 2,
+        "name": "Logistic regression"
+      },
+      {
+        "rank": 3,
+        "name": "Clustering"
+      },
+      {
+        "rank": 4,
+        "name": "Principal component analysis (PCA)"
+      },
+      {
+        "rank": 5,
+        "name": "Hypothesis testing"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Predictive analytics"
+      },
+      {
+        "rank": 2,
+        "name": "Data-driven decision making"
+      },
+      {
+        "rank": 3,
+        "name": "Team leadership"
+      },
+      {
+        "rank": 4,
+        "name": "Technical communication"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Random forest predicts callbacks at 70.5% accuracy",
+        "measure_type": "model_performance",
+        "value": "70.5% accuracy; 0.81 ROC-AUC",
+        "basis": "sample_data",
+        "source": "JobCallbacks_TeamLead_StatisticalMethods_ProjectReport_4o4.pdf"
+      },
+      {
+        "rank": 2,
+        "name": "Education and professional level are significantly associated with callbacks",
+        "measure_type": "statistical_result",
+        "value": "Chi-square 65.4 and 164.9",
+        "basis": "sample_data",
+        "source": "JobCallbacks_TeamLead_StatisticalMethods_ProjectReport_4o4.pdf"
+      },
+      {
+        "rank": 3,
+        "name": "Logistic regression baseline reaches 66.7% accuracy",
+        "measure_type": "model_performance",
+        "value": "66.7% accuracy; 0.71 ROC-AUC",
+        "basis": "sample_data",
+        "source": "JobCallbacks_TeamLead_StatisticalMethods_ProjectReport_4o4.pdf"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "JobCallbacks_TeamLead_StatisticalMethods_PresentationDeck_1o4",
+        "filename": "JobCallbacks_TeamLead_StatisticalMethods_PresentationDeck_1o4.pdf",
+        "artifact_type": "presentation_deck",
+        "format": "pdf",
+        "sequence": 1,
+        "sequence_total": 4,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "JobCallbacks_TeamLead_StatisticalMethods_ProjectCodeResults_2o4",
+        "filename": "JobCallbacks_TeamLead_StatisticalMethods_ProjectCodeResults_2o4.ipynb",
+        "artifact_type": "notebook",
+        "format": "ipynb",
+        "sequence": 2,
+        "sequence_total": 4,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "JobCallbacks_TeamLead_StatisticalMethods_ProjectCode_3o4",
+        "filename": "JobCallbacks_TeamLead_StatisticalMethods_ProjectCode_3o4.py",
+        "artifact_type": "project_code",
+        "format": "py",
+        "sequence": 3,
+        "sequence_total": 4,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "JobCallbacks_TeamLead_StatisticalMethods_ProjectReport_4o4",
+        "filename": "JobCallbacks_TeamLead_StatisticalMethods_ProjectReport_4o4.pdf",
+        "artifact_type": "project_report",
+        "format": "pdf",
+        "sequence": 4,
+        "sequence_total": 4,
+        "prefix_source": "filename",
+        "notes": null
+      }
+    ],
+    "problem": "Which resume features are linked to interview callbacks, and can a model predict them reliably?",
+    "approach": "Team project of three. Cleaned the data with rule-based checks, ran chi-square and correlation tests, and compared logistic regression with random forest models.",
+    "limitations": "The dataset and labels are synthetic, so the results show the method, not real hiring practice.",
+    "image": "images/jobcallbacks.jpg",
+    "figures": [
+      {
+        "image": "images/figures/jobcallbacks-1.png",
+        "caption": "Mean callback rate by education level",
+        "source": "JobCallbacks project report, p. 24"
+      },
+      {
+        "image": "images/figures/jobcallbacks-2.png",
+        "caption": "ROC curve, logistic regression model",
+        "source": "JobCallbacks project report, p. 29"
+      }
+    ],
+    "flagship": true,
+    "headline": "A random forest model predicts interview callbacks at 70.5% accuracy, above a 66.7% baseline, and finds education and professional level significantly linked to callbacks."
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "visualize-isef",
+    "title": "Visualizing International Science and Engineering Fair Trends (2014–2024)",
+    "short_name": "VisualizeISEF",
+    "file_prefix": "VisualizeISEF",
+    "summary": "Cleans and analyzes ISEF award data to find trends in categories, awards, and keywords across a decade.",
+    "context": {
+      "type": "course",
+      "course_code": "INFO 4707",
+      "institution": "University of North Texas",
+      "term": "Spring 2026",
+      "team_size": 1,
+      "role": "Sole author"
+    },
+    "domain": "Data science & machine learning",
+    "industry": "Education (STEM competitions)",
+    "business_context": "Education program analysis (STEM competitions)",
+    "status": "complete",
+    "evidence_level": "built",
+    "visibility": "public",
+    "featured": false,
+    "tags": [
+      "data visualization",
+      "trend analysis",
+      "text analytics"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Data visualization"
+      },
+      {
+        "rank": 2,
+        "name": "Exploratory data analysis"
+      },
+      {
+        "rank": 3,
+        "name": "Data cleaning and validation"
+      },
+      {
+        "rank": 4,
+        "name": "Hypothesis-driven research"
+      },
+      {
+        "rank": 5,
+        "name": "Technical writing"
+      }
+    ],
+    "tools": [
+      {
+        "rank": 1,
+        "name": "Python"
+      },
+      {
+        "rank": 2,
+        "name": "pandas"
+      },
+      {
+        "rank": 3,
+        "name": "Matplotlib"
+      },
+      {
+        "rank": 4,
+        "name": "Seaborn"
+      },
+      {
+        "rank": 5,
+        "name": "Jupyter"
+      }
+    ],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Keyword text analysis"
+      },
+      {
+        "rank": 2,
+        "name": "Hypothesis testing"
+      },
+      {
+        "rank": 3,
+        "name": "Trend analysis"
+      },
+      {
+        "rank": 4,
+        "name": "Rule-based data validation"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Technical communication"
+      },
+      {
+        "rank": 2,
+        "name": "Data-driven decision making"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Audited ISEF records and quantified missing category data",
+        "measure_type": "data_quality",
+        "value": "68.4% (2015) and 82.3% (2016) missing",
+        "basis": "measured",
+        "source": "VisualizeISEF_DataVisualization_ProjectReport_3o4.pdf"
+      },
+      {
+        "rank": 2,
+        "name": "Analyzed 14,873 ISEF projects across 2014–2024",
+        "measure_type": "data_quality",
+        "value": "14,873 projects",
+        "basis": "measured",
+        "source": "VisualizeISEF_DataVisualization_ProjectReport_3o4.pdf"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "VisualizeISEF_DataVisualization_PresentationDeck_1o4",
+        "filename": "VisualizeISEF_DataVisualization_PresentationDeck_1o4.pdf",
+        "artifact_type": "presentation_deck",
+        "format": "pdf",
+        "sequence": 1,
+        "sequence_total": 4,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "VisualizeISEF_DataVisualization_ProjectCodeResults_2o4",
+        "filename": "VisualizeISEF_DataVisualization_ProjectCodeResults_2o4.ipynb",
+        "artifact_type": "notebook",
+        "format": "ipynb",
+        "sequence": 2,
+        "sequence_total": 4,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "VisualizeISEF_DataVisualization_ProjectCode_4o4",
+        "filename": "VisualizeISEF_DataVisualization_ProjectCode_4o4.py",
+        "artifact_type": "project_code",
+        "format": "py",
+        "sequence": 4,
+        "sequence_total": 4,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "VisualizeISEF_DataVisualization_ProjectReport_3o4",
+        "filename": "VisualizeISEF_DataVisualization_ProjectReport_3o4.pdf",
+        "artifact_type": "project_report",
+        "format": "pdf",
+        "sequence": 3,
+        "sequence_total": 4,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "isef-database",
+        "filename": "VisualizeISEF/isef-database.csv",
+        "artifact_type": "dataset",
+        "format": "csv",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": null
+      },
+      {
+        "artifact_id": "README",
+        "filename": "VisualizeISEF/README.md",
+        "artifact_type": "readme",
+        "format": "md",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": "Empty file (1 byte)."
+      }
+    ],
+    "problem": "What do ISEF competition records from 2014 to 2024 show about trends in categories and awards, and how reliable is the data?",
+    "approach": "Cleaned and deduplicated 14,873 project records, audited missing data year by year, and analyzed category trends and keywords in Python.",
+    "limitations": "About 20% of records lack category values in some years, which limits year-to-year comparisons.",
+    "image": "images/visualize-isef.jpg",
+    "figures": [
+      {
+        "image": "images/figures/visualize-isef-1.png",
+        "caption": "Hypothesis test: does category growth predict award win rate?",
+        "source": "VisualizeISEF project report, p. 23"
+      }
+    ],
+    "flagship": false,
+    "headline": "Audit found 68.4% of 2015 and 82.3% of 2016 ISEF records lack category data, so trends for those years are unreliable until cleaned."
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "life-development",
+    "title": "Modeling Life Expectancy and Country Development Indicators",
+    "short_name": "LifeDevelopment",
+    "file_prefix": "LifeDevelopment",
+    "summary": "Models how BMI, immunization, schooling, and GDP relate to life expectancy and development status.",
+    "context": {
+      "type": "course",
+      "course_code": "DTSC3010",
+      "institution": null,
+      "term": "Fall 2024",
+      "team_size": 1,
+      "role": "Sole author"
+    },
+    "domain": "Data science & machine learning",
+    "industry": "Public health & global development",
+    "business_context": "Public health and development planning",
+    "status": "complete",
+    "evidence_level": "built",
+    "visibility": "public",
+    "featured": false,
+    "tags": [
+      "R",
+      "regression",
+      "public health data"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Statistical analysis"
+      },
+      {
+        "rank": 2,
+        "name": "Predictive modeling"
+      },
+      {
+        "rank": 3,
+        "name": "Data cleaning and validation"
+      },
+      {
+        "rank": 4,
+        "name": "Exploratory data analysis"
+      },
+      {
+        "rank": 5,
+        "name": "Data visualization"
+      }
+    ],
+    "tools": [
+      {
+        "rank": 1,
+        "name": "R"
+      },
+      {
+        "rank": 2,
+        "name": "ggplot2"
+      },
+      {
+        "rank": 3,
+        "name": "dplyr"
+      },
+      {
+        "rank": 4,
+        "name": "caret"
+      }
+    ],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Regression analysis"
+      },
+      {
+        "rank": 2,
+        "name": "Random forest classification"
+      },
+      {
+        "rank": 3,
+        "name": "Logistic regression"
+      },
+      {
+        "rank": 4,
+        "name": "Hypothesis testing"
+      },
+      {
+        "rank": 5,
+        "name": "Model evaluation"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Predictive analytics"
+      },
+      {
+        "rank": 2,
+        "name": "Data-driven decision making"
+      },
+      {
+        "rank": 3,
+        "name": "Technical communication"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Development indicators explain 61.1% of variation in life expectancy",
+        "measure_type": "statistical_result",
+        "value": "R² = 61.13%",
+        "basis": "measured",
+        "source": "LifeDevelopment_IntroDataScience_FinalReport_2o3.pdf"
+      },
+      {
+        "rank": 2,
+        "name": "A classification model reaches 94.2% overall accuracy",
+        "measure_type": "model_performance",
+        "value": "94.24% accuracy (report flags possible skew)",
+        "basis": "measured",
+        "source": "LifeDevelopment_IntroDataScience_FinalReport_2o3.pdf"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "LifeDevelopment_IntroDataScience_FinalReport_2o3",
+        "filename": "LifeDevelopment_IntroDataScience_FinalReport_2o3.pdf",
+        "artifact_type": "project_report",
+        "format": "pdf",
+        "sequence": 2,
+        "sequence_total": 3,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "LifeDevelopment_IntroDataScience_ProjectCode_1o3",
+        "filename": "LifeDevelopment_IntroDataScience_ProjectCode_1o3.Rmd",
+        "artifact_type": "project_code",
+        "format": "Rmd",
+        "sequence": 1,
+        "sequence_total": 3,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "LiveDevelopment_IntroDataScience_PresentationDeck_3o3",
+        "filename": "LiveDevelopment_IntroDataScience_PresentationDeck_3o3.pdf",
+        "artifact_type": "presentation_deck",
+        "format": "pdf",
+        "sequence": 3,
+        "sequence_total": 3,
+        "prefix_source": "filename",
+        "notes": "Prefix says 'Live', project is 'Life'. Linked by suffix; confirm and rename."
+      },
+      {
+        "artifact_id": "Life-Expectancy-Data-Updated",
+        "filename": "LifeDevelopment/Life-Expectancy-Data-Updated.csv",
+        "artifact_type": "dataset",
+        "format": "csv",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": null
+      },
+      {
+        "artifact_id": "README",
+        "filename": "LifeDevelopment/README.md",
+        "artifact_type": "readme",
+        "format": "md",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": "Empty file (1 byte)."
+      }
+    ],
+    "problem": "Which development indicators, such as BMI, immunization, schooling, and GDP, are linked to life expectancy?",
+    "approach": "Compared t-tests, correlation tests, linear and generalized models, random forest, and a support vector machine in R, and evaluated each model.",
+    "limitations": "The report notes that some classification accuracy may be inflated.",
+    "image": "images/life-development.jpg",
+    "figures": [
+      {
+        "image": "images/figures/life-development-1.png",
+        "caption": "Ten-year change in life expectancy, developed vs. developing countries (2002–2012)",
+        "source": "Life development final report, p. 6"
+      },
+      {
+        "image": "images/figures/life-development-2.png",
+        "caption": "Average life expectancy by region over time",
+        "source": "Life development final report, p. 7"
+      }
+    ],
+    "flagship": false,
+    "headline": "BMI, immunization, schooling, and GDP together explain 61.1% of the variation in life expectancy, a practical guide for public health and development planning."
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "divergence-thermophiles",
+    "title": "Investigating Divergence and Adaptations Between Heat Shock Proteins of Thermophilic Prokaryotes and Mesophilic Eukaryotes",
+    "short_name": "DivergenceThermophiles",
+    "file_prefix": "DivergenceThermophiles",
+    "summary": "Comparative sequence analysis and phylogenetics of heat shock proteins across thermophilic and mesophilic organisms.",
+    "context": {
+      "type": "course",
+      "course_code": "BIOL4815",
+      "institution": "University of North Texas",
+      "term": "Spring 2025",
+      "team_size": 1,
+      "role": "Sole author"
+    },
+    "domain": "Bioinformatics & computational biology",
+    "industry": "Life sciences research",
+    "business_context": "Life sciences research: protein evolution",
+    "status": "complete",
+    "evidence_level": "built",
+    "visibility": "public",
+    "featured": false,
+    "tags": [
+      "bioinformatics",
+      "R",
+      "phylogenetics"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Bioinformatics analysis"
+      },
+      {
+        "rank": 2,
+        "name": "Statistical analysis"
+      },
+      {
+        "rank": 3,
+        "name": "Hypothesis-driven research"
+      },
+      {
+        "rank": 4,
+        "name": "Data visualization"
+      },
+      {
+        "rank": 5,
+        "name": "Technical writing"
+      }
+    ],
+    "tools": [
+      {
+        "rank": 1,
+        "name": "R"
+      },
+      {
+        "rank": 2,
+        "name": "Bioconductor"
+      },
+      {
+        "rank": 3,
+        "name": "ape"
+      },
+      {
+        "rank": 4,
+        "name": "ggplot2"
+      },
+      {
+        "rank": 5,
+        "name": "phangorn"
+      }
+    ],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Sequence alignment"
+      },
+      {
+        "rank": 2,
+        "name": "Phylogenetic tree construction"
+      },
+      {
+        "rank": 3,
+        "name": "Principal component analysis (PCA)"
+      },
+      {
+        "rank": 4,
+        "name": "Hypothesis testing"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Computational biology research"
+      },
+      {
+        "rank": 2,
+        "name": "Technical communication"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Thermophilic prokaryotes have significantly higher median GC content",
+        "measure_type": "statistical_result",
+        "value": "Significant (t-test)",
+        "basis": "measured",
+        "source": "DivergenceThermophiles_Bioinformatics_PresentationDeck_2o2.pdf"
+      },
+      {
+        "rank": 2,
+        "name": "Two components explain 50.1% of variance in HSP sequence features",
+        "measure_type": "statistical_result",
+        "value": "30.97% + 19.15% = 50.12%",
+        "basis": "measured",
+        "source": "DivergenceThermophiles_Bioinformatics_PresentationDeck_2o2.pdf"
+      },
+      {
+        "rank": 3,
+        "name": "Average percent identity of 24.5% across divergent HSP sequences",
+        "measure_type": "statistical_result",
+        "value": "24.5% (SD 2.9)",
+        "basis": "measured",
+        "source": "DivergenceThermophiles_Bioinformatics_PresentationDeck_2o2.pdf"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "DivergenceThermophiles_Bioinformatics_PresentationDeck_2o2",
+        "filename": "DivergenceThermophiles_Bioinformatics_PresentationDeck_2o2.pdf",
+        "artifact_type": "presentation_deck",
+        "format": "pdf",
+        "sequence": 2,
+        "sequence_total": 2,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "DivergenceThermophiles_Bioinformatics_ProjectCode_1o2",
+        "filename": "DivergenceThermophiles_Bioinformatics_ProjectCode_1o2.Rmd",
+        "artifact_type": "project_code",
+        "format": "Rmd",
+        "sequence": 1,
+        "sequence_total": 2,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "README",
+        "filename": "DivergenceThermophiles/README.md",
+        "artifact_type": "readme",
+        "format": "md",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": "Empty file (1 byte)."
+      },
+      {
+        "artifact_id": "aa_eukaryotic",
+        "filename": "DivergenceThermophiles/aa_eukaryotic.txt",
+        "artifact_type": "sequence_data",
+        "format": "txt",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": null
+      },
+      {
+        "artifact_id": "aa_prokaryotic",
+        "filename": "DivergenceThermophiles/aa_prokaryotic.txt",
+        "artifact_type": "sequence_data",
+        "format": "txt",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": null
+      },
+      {
+        "artifact_id": "cds_eukaryotic",
+        "filename": "DivergenceThermophiles/cds_eukaryotic.txt",
+        "artifact_type": "sequence_data",
+        "format": "txt",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": null
+      },
+      {
+        "artifact_id": "cds_prokaryotic",
+        "filename": "DivergenceThermophiles/cds_prokaryotic.txt",
+        "artifact_type": "sequence_data",
+        "format": "txt",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": null
+      },
+      {
+        "artifact_id": "dna_eukaryotic",
+        "filename": "DivergenceThermophiles/dna_eukaryotic.txt",
+        "artifact_type": "sequence_data",
+        "format": "txt",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": null
+      },
+      {
+        "artifact_id": "dna_prokaryotic",
+        "filename": "DivergenceThermophiles/dna_prokaryotic.txt",
+        "artifact_type": "sequence_data",
+        "format": "txt",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": null
+      },
+      {
+        "artifact_id": "projectfastadnaseq",
+        "filename": "DivergenceThermophiles/projectfastadnaseq.txt",
+        "artifact_type": "sequence_data",
+        "format": "txt",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": null
+      },
+      {
+        "artifact_id": "projectfastaproteinseq",
+        "filename": "DivergenceThermophiles/projectfastaproteinseq.txt",
+        "artifact_type": "sequence_data",
+        "format": "txt",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "folder",
+        "notes": null
+      }
+    ],
+    "problem": "How do heat shock proteins differ between thermophilic prokaryotes and mesophilic eukaryotes?",
+    "approach": "Aligned sequences in R with Bioconductor, built phylogenetic trees, applied principal component analysis, and tested GC content differences.",
+    "limitations": "Some tree branches have low bootstrap confidence (39% in one case), so the tree structure is tentative.",
+    "image": "images/divergence-thermophiles.jpg",
+    "figures": [
+      {
+        "image": "images/figures/divergence-thermophiles-1.png",
+        "caption": "Principal component analysis of sequence distances",
+        "source": "Divergence thermophiles presentation deck, p. 11"
+      },
+      {
+        "image": "images/figures/divergence-thermophiles-2.png",
+        "caption": "GC content, eukaryotes vs. prokaryotes",
+        "source": "Divergence thermophiles presentation deck, p. 19"
+      }
+    ],
+    "flagship": false,
+    "headline": "Heat shock proteins in thermophilic prokaryotes have significantly higher GC content, and two sequence patterns explain half of their variation (50.1%)."
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "optimizing-seating",
+    "title": "Optimizing Automotive Seating Position to Reduce Injury Severity in Short-Statured Drivers",
+    "short_name": "OptimizingSeating",
+    "file_prefix": "OptimizingSeating",
+    "summary": "Simulation-based study of seating position and injury risk for short-statured drivers, with an electronics verification system.",
+    "context": {
+      "type": "independent_research",
+      "course_code": null,
+      "institution": "Plano West Senior High School (Plano ISD)",
+      "term": "2019–2022",
+      "team_size": 1,
+      "role": "Sole author"
+    },
+    "domain": "Engineering & simulation",
+    "industry": "Automotive safety & mobility",
+    "business_context": "Automotive safety and crash-test design",
+    "status": "complete",
+    "evidence_level": "built",
+    "visibility": "public",
+    "featured": true,
+    "tags": [
+      "simulation",
+      "systems engineering",
+      "automotive"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Simulation modeling"
+      },
+      {
+        "rank": 2,
+        "name": "Experimental design"
+      },
+      {
+        "rank": 3,
+        "name": "Statistical analysis"
+      },
+      {
+        "rank": 4,
+        "name": "User research"
+      },
+      {
+        "rank": 5,
+        "name": "Technical writing"
+      }
+    ],
+    "tools": [
+      {
+        "rank": 1,
+        "name": "LS-DYNA"
+      },
+      {
+        "rank": 2,
+        "name": "Excel"
+      },
+      {
+        "rank": 3,
+        "name": "MagicDraw (SysML)"
+      },
+      {
+        "rank": 4,
+        "name": "Visuino"
+      },
+      {
+        "rank": 5,
+        "name": "Arduino"
+      }
+    ],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Finite element simulation"
+      },
+      {
+        "rank": 2,
+        "name": "Regression analysis"
+      },
+      {
+        "rank": 3,
+        "name": "Before-and-after comparison"
+      },
+      {
+        "rank": 4,
+        "name": "Systems design"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Systems engineering"
+      },
+      {
+        "rank": 2,
+        "name": "Human-centered design"
+      },
+      {
+        "rank": 3,
+        "name": "Embedded systems design"
+      },
+      {
+        "rank": 4,
+        "name": "Technical communication"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Seat-position optimization cuts the simulated injury measure by 39%",
+        "measure_type": "simulated_result",
+        "value": "39% reduction",
+        "basis": "simulated",
+        "source": "OptimizingSeating_EngineeringSimulations_ResearchPaper_1o2.pdf"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "OptimizingSeating_EngineeringSimulations_PresentationDeck_2o2",
+        "filename": "OptimizingSeating_EngineeringSimulations_PresentationDeck_2o2.pdf",
+        "artifact_type": "presentation_deck",
+        "format": "pdf",
+        "sequence": 2,
+        "sequence_total": 2,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "OptimizingSeating_EngineeringSimulations_ResearchPaper_1o2",
+        "filename": "OptimizingSeating_EngineeringSimulations_ResearchPaper_1o2.pdf",
+        "artifact_type": "research_paper",
+        "format": "pdf",
+        "sequence": 1,
+        "sequence_total": 2,
+        "prefix_source": "filename",
+        "notes": null
+      }
+    ],
+    "problem": "Short-statured drivers face higher injury risk in crashes. Can seat position reduce it?",
+    "approach": "Built a crash-sled model in LS-DYNA, compared baseline and optimized seating positions, and gathered survey and interview input for the design.",
+    "limitations": "Results come from simulation, not physical crash tests.",
+    "image": "images/optimizing-seating.jpg",
+    "awards": [
+      "Semifinalist (Top 300) Scholar at Regeneron Science Talent Search 2022",
+      "Presenter at American Junior Academy of Science 2021",
+      "Presenter at Sigma Xi Student Research Showcase 2021",
+      "Awardee at innovatHER 2021",
+      "Engineering II Second Prize at Texas Junior Academy of Science 2021",
+      "Engineering I First Prize at Texas Junior Academy of Science 2020",
+      "Sr Engineering Mechanics Honorable Mention at Dallas Regional Science and Engineering Fair 2019",
+      "Sr Engineering First Prize at Shepton High School Campus SEF 2019",
+      "Sr Computational Biology and Bioinformatics Third Prize at Plano ISD District Science and Engineering Fair 2019",
+      "Sr First Prize at SparkSTEM Virtual Science Fair 2020",
+      "Sr Mechanical Engineering First Prize at Plano West Senior High School Campus SEF 2020",
+      "Jugaad Special Award at Plano ISD District Science and Engineering Fair 2021",
+      "Physical Sciences Second Prize at Plano West Senior High School Campus SEF 2021"
+    ],
+    "figures": [
+      {
+        "image": "images/figures/optimizing-seating-1.png",
+        "caption": "Simulated occupant, baseline seat",
+        "source": "OptimizingSeating research paper, p. 7"
+      },
+      {
+        "image": "images/figures/optimizing-seating-2.png",
+        "caption": "Simulated occupant, optimized seat",
+        "source": "OptimizingSeating research paper, p. 8"
+      },
+      {
+        "image": "images/figures/optimizing-seating-3.png",
+        "caption": "Composite injury score by participant, baseline vs. optimized",
+        "source": "OptimizingSeating research paper, p. 9"
+      }
+    ],
+    "flagship": true,
+    "related": [
+      {
+        "project_id": "seat-iq",
+        "relation": "The research behind SEAT IQ, which turns these findings into a product."
+      }
+    ],
+    "headline": "Optimizing seat position cut a simulated injury measure by 39%, suggesting seating choices could reduce injury risk for short-statured drivers."
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "sandra-glove",
+    "title": "SANDRA (Serve and Data Results Analysis): Athletic Tech Glove",
+    "short_name": "SANDRA",
+    "file_prefix": "SANDRA",
+    "summary": "Sensor-equipped athletic glove that captures and analyzes serve data, built on Arduino.",
+    "context": {
+      "type": "independent_research",
+      "course_code": null,
+      "institution": "Shepton High School",
+      "term": "2017–2018",
+      "team_size": 1,
+      "role": "Sole author"
+    },
+    "domain": "Embedded systems & hardware",
+    "industry": "Sports technology",
+    "business_context": "Sports technology and athlete performance tracking",
+    "status": "complete",
+    "evidence_level": "built",
+    "visibility": "public",
+    "featured": false,
+    "tags": [
+      "embedded",
+      "Arduino",
+      "sports"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Embedded prototyping"
+      },
+      {
+        "rank": 2,
+        "name": "Requirements analysis"
+      },
+      {
+        "rank": 3,
+        "name": "Experimental design"
+      },
+      {
+        "rank": 4,
+        "name": "Technical writing"
+      }
+    ],
+    "tools": [
+      {
+        "rank": 1,
+        "name": "Arduino"
+      },
+      {
+        "rank": 2,
+        "name": "Visuino"
+      },
+      {
+        "rank": 3,
+        "name": "Sensors and circuits"
+      },
+      {
+        "rank": 4,
+        "name": "Excel"
+      },
+      {
+        "rank": 5,
+        "name": "MagicDraw (SysML)"
+      }
+    ],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Sensor calibration"
+      },
+      {
+        "rank": 2,
+        "name": "Systems design"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Embedded systems design"
+      },
+      {
+        "rank": 2,
+        "name": "Hardware-software integration"
+      },
+      {
+        "rank": 3,
+        "name": "Product management"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Detects serve outcomes correctly in 29 of 30 trials",
+        "measure_type": "prototype_performance",
+        "value": "96.7% accuracy",
+        "basis": "measured",
+        "source": "SANDRA_EmbeddedSystems_ResearchPaper_1o2.pdf"
+      },
+      {
+        "rank": 2,
+        "name": "Meets 24 of 28 function and wearability requirements",
+        "measure_type": "requirements_met",
+        "value": "85.7% of requirements",
+        "basis": "measured",
+        "source": "SANDRA_EmbeddedSystems_ResearchPaper_1o2.pdf"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "SANDRA_EmbeddedSystems_PresentationDeck_2o2",
+        "filename": "SANDRA_EmbeddedSystems_PresentationDeck_2o2.pdf",
+        "artifact_type": "presentation_deck",
+        "format": "pdf",
+        "sequence": 2,
+        "sequence_total": 2,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "SANDRA_EmbeddedSystems_ResearchPaper_1o2",
+        "filename": "SANDRA_EmbeddedSystems_ResearchPaper_1o2.pdf",
+        "artifact_type": "research_paper",
+        "format": "pdf",
+        "sequence": 1,
+        "sequence_total": 2,
+        "prefix_source": "filename",
+        "notes": null
+      }
+    ],
+    "problem": "Athletes need accurate, objective data about their serves, which is hard to capture by eye.",
+    "approach": "Built a wearable glove with sensors and an Arduino, calibrated the sensors, and tested the glove on 30 serves.",
+    "limitations": "Tested on a single set of 30 serves.",
+    "image": "images/sandra-glove.jpg",
+    "awards": [
+      "Grand Prize and Jr Embedded Systems First Prize at Frankford Middle School Campus SEF",
+      "Jr Embedded Systems First Prize at Plano ISD District Science and Engineering Fair",
+      "Jr Physical Grand Prize, Jr Embedded Systems First Prize, Cooper Institute Junior Special Award (Exercise/Health/Nutrition) First Prize, Office of Naval Research Jr Naval Science Award, and Texas Instruments Best Jr Electronics/Computing Project at Dallas Regional Science and Engineering Fair",
+      "Jr Embedded Systems First Prize at Texas State Science and Engineering Fair",
+      "Top 300 at Broadcom MASTERS",
+      "General Engineering Honorable Mention at Texas Junior Academy of Science",
+      "Student Presenter at No Magic World Symposium"
+    ],
+    "figures": [
+      {
+        "image": "images/figures/sandra-glove-1.png",
+        "caption": "Trial results: sensor angles, G-force, and success",
+        "source": "SANDRA research paper, p. 10"
+      },
+      {
+        "image": "images/figures/sandra-glove-2.png",
+        "caption": "Conceptual block definition diagram",
+        "source": "SANDRA research paper, p. 4"
+      }
+    ],
+    "flagship": false,
+    "headline": "Glove sensors identified serve outcomes correctly in 29 of 30 trials (96.7%), showing wearable sensors can give athletes objective serve data."
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "dbhuvl-bone-light",
+    "title": "Determining Bone Health Utilizing Visible Light",
+    "short_name": "DBHUVL (Bone light)",
+    "file_prefix": "DBHUVL",
+    "summary": "Arduino-based visible-light device that tests bone porosity as a screening signal for osteoporosis.",
+    "context": {
+      "type": "independent_research",
+      "course_code": null,
+      "institution": "Shepton High School",
+      "term": "2018–2019",
+      "team_size": 1,
+      "role": "Sole author"
+    },
+    "domain": "Embedded systems & hardware",
+    "industry": "Healthcare & medical devices",
+    "business_context": "Health screening and medical device R&D",
+    "status": "complete",
+    "evidence_level": "built",
+    "visibility": "public",
+    "featured": false,
+    "tags": [
+      "embedded",
+      "biomedical",
+      "Arduino"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Embedded prototyping"
+      },
+      {
+        "rank": 2,
+        "name": "Experimental design"
+      },
+      {
+        "rank": 3,
+        "name": "Hypothesis-driven research"
+      },
+      {
+        "rank": 4,
+        "name": "Technical writing"
+      }
+    ],
+    "tools": [
+      {
+        "rank": 1,
+        "name": "Arduino"
+      },
+      {
+        "rank": 2,
+        "name": "Visuino"
+      },
+      {
+        "rank": 3,
+        "name": "Sensors and circuits"
+      },
+      {
+        "rank": 4,
+        "name": "Excel"
+      }
+    ],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Before-and-after comparison"
+      },
+      {
+        "rank": 2,
+        "name": "Hypothesis testing"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Embedded systems design"
+      },
+      {
+        "rank": 2,
+        "name": "Hardware-software integration"
+      },
+      {
+        "rank": 3,
+        "name": "Technical communication"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Light-sensor resistance rises after boiling, separating porous from dense samples",
+        "measure_type": "prototype_performance",
+        "value": "+29.8% (thin samples); +12.2% (other samples)",
+        "basis": "measured",
+        "source": "DBHUVL_EmbeddedSytems_ResearchPaper_1o2.pdf"
+      },
+      {
+        "rank": 2,
+        "name": "Built and tested a visible-light prototype",
+        "measure_type": "delivery_milestone",
+        "value": "Prototype built",
+        "basis": "delivered",
+        "source": "DBHUVL_EmbeddedSytems_ResearchPaper_1o2.pdf"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "DBHUVL_EmbeddedSystems_PresentationDeck_2o2",
+        "filename": "DBHUVL_EmbeddedSystems_PresentationDeck_2o2.pdf",
+        "artifact_type": "presentation_deck",
+        "format": "pdf",
+        "sequence": 2,
+        "sequence_total": 2,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "DBHUVL_EmbeddedSytems_ResearchPaper_1o2",
+        "filename": "DBHUVL_EmbeddedSytems_ResearchPaper_1o2.pdf",
+        "artifact_type": "research_paper",
+        "format": "pdf",
+        "sequence": 1,
+        "sequence_total": 2,
+        "prefix_source": "filename",
+        "notes": "Typo in filename: 'EmbeddedSytems'. Rename."
+      }
+    ],
+    "problem": "Porous bone raises fracture risk in osteoporosis. Can visible light reveal differences in bone porosity?",
+    "approach": "Built an Arduino device with a light-dependent resistor and measured resistance before and after boiling bone samples, which changes porosity.",
+    "limitations": "Tested on bovine bone samples, not human bone.",
+    "image": "images/dbhuvl-bone-light.jpg",
+    "awards": [
+      "Sr Grand Prize at Astutia Girls in STEAM",
+      "Best Biomedical Imaging Project at Helyx Research Fair 2020",
+      "Sr Biomedical Engineering Finalist at Texas State Science and Engineering Fair",
+      "Student Presenter at State of Texas Chapter of the Health Physics Society",
+      "Medicine and Health / Behavioral and Social Sciences Honorable Mention at Texas Junior Academy of Science",
+      "Sr Biomedical Engineering Third Prize at Dallas Regional Science and Engineering Fair",
+      "Best Radiation-Related Project (State of Texas Chapter of the Health Physics Society) at Dallas Regional Science and Engineering Fair",
+      "Sr Engineering Mechanics First Prize at Shepton High School Campus SEF"
+    ],
+    "figures": [
+      {
+        "image": "images/figures/dbhuvl-bone-light-1.png",
+        "caption": "LDR resistance vs. digital light meter readings (lux)",
+        "source": "DBHUVL research paper, p. 8"
+      },
+      {
+        "image": "images/figures/dbhuvl-bone-light-2.png",
+        "caption": "Aggregate change in LDR resistance across thin bone samples",
+        "source": "DBHUVL research paper, p. 11"
+      }
+    ],
+    "flagship": false,
+    "headline": "Boiling raised light-sensor resistance by 29.8% in thin bone samples and 12.2% in others, suggesting visible light can separate porous from dense bone."
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "ctrl-gaming",
+    "title": "CTRL: Gaming Chat Moderation and Education System",
+    "short_name": "CTRL Gaming",
+    "file_prefix": "CTRLGamingSystem",
+    "summary": "Hackathon proposal for a gaming chat system that rewards positive behavior and explains moderation decisions.",
+    "context": {
+      "type": "hackathon",
+      "course_code": null,
+      "institution": null,
+      "term": "Winter 2025",
+      "team_size": 4,
+      "role": "Product manager"
+    },
+    "domain": "Product management & commercialization",
+    "industry": "Gaming & online communities",
+    "business_context": "Online gaming community trust and safety",
+    "status": "complete",
+    "evidence_level": "built",
+    "visibility": "public",
+    "featured": true,
+    "tags": [
+      "trust and safety",
+      "gamification",
+      "hackathon"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Product strategy"
+      },
+      {
+        "rank": 2,
+        "name": "Problem framing"
+      },
+      {
+        "rank": 3,
+        "name": "Presentation and pitching"
+      }
+    ],
+    "tools": [],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Gamification"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Trust and safety design"
+      },
+      {
+        "rank": 2,
+        "name": "Product management"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Won a $10,000 grant toward production",
+        "measure_type": "funding_secured",
+        "value": "$10,000",
+        "basis": "awarded",
+        "source": "owner-provided"
+      },
+      {
+        "rank": 2,
+        "name": "Placed 1st of 8 teams in a selective hackathon",
+        "measure_type": "competition_result",
+        "value": "1st of 8 teams",
+        "basis": "awarded",
+        "source": "owner-provided"
+      },
+      {
+        "rank": 3,
+        "name": "Built an MVP for chat moderation and player rewards",
+        "measure_type": "delivery_milestone",
+        "value": "MVP built",
+        "basis": "delivered",
+        "source": "owner-provided"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "CTRLGamingSystem_ADIRFoundation_PitchDeck_1o1",
+        "filename": "CTRLGamingSystem_ADIRFoundation_PitchDeck_1o1.pdf",
+        "artifact_type": "pitch_deck",
+        "format": "pdf",
+        "sequence": 1,
+        "sequence_total": 1,
+        "prefix_source": "filename",
+        "notes": null
+      }
+    ],
+    "problem": "Hate in gaming communities drives players and revenue away, and bans alone can deepen the cycle.",
+    "approach": "Designed a chat system that rewards positive behavior and explains moderation decisions. The team built an MVP and pitched it at a selective hackathon.",
+    "limitations": "Usage data for the MVP is not yet available.",
+    "image": "images/ctrl-gaming.jpg",
+    "figures": [
+      {
+        "image": "images/figures/ctrl-gaming-1.png",
+        "caption": "Inventory and achievements screen",
+        "source": "CTRL pitch deck, p. 6"
+      },
+      {
+        "image": "images/figures/ctrl-gaming-2.png",
+        "caption": "Give Kindness: the peer-reward flow",
+        "source": "CTRL pitch deck, p. 4"
+      }
+    ],
+    "flagship": true,
+    "headline": "A team of four won a $10,000 grant to take its chat moderation concept toward production, after placing 1st of 8 teams at a selective hackathon."
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "seat-iq",
+    "title": "SEAT IQ",
+    "short_name": "SEAT IQ",
+    "file_prefix": "SEATIQ",
+    "summary": "Mobile app concept using bioinformatics-style fit analysis to optimize driving position for safety, comfort, and accessibility.",
+    "context": {
+      "type": "course",
+      "course_code": null,
+      "institution": null,
+      "term": "Spring 2026",
+      "team_size": 3,
+      "role": "Product lead"
+    },
+    "domain": "Product management & commercialization",
+    "industry": "Automotive safety & mobility",
+    "business_context": "Automotive safety and mobility product commercialization",
+    "status": "proposal",
+    "evidence_level": "claimed",
+    "visibility": "public",
+    "featured": true,
+    "tags": [
+      "Tech Commercialization",
+      "product management",
+      "automotive"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Product strategy"
+      },
+      {
+        "rank": 2,
+        "name": "Market analysis"
+      },
+      {
+        "rank": 3,
+        "name": "Go-to-market planning"
+      },
+      {
+        "rank": 4,
+        "name": "Brand strategy"
+      },
+      {
+        "rank": 5,
+        "name": "Presentation and pitching"
+      }
+    ],
+    "tools": [],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Market sizing (TAM, SAM, SOM)"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Product management"
+      },
+      {
+        "rank": 2,
+        "name": "Business strategy"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Serviceable obtainable market of 2.2M",
+        "measure_type": "market_sizing",
+        "value": "SOM 2.2M; SAM 234M; TAM 1.6–2B",
+        "basis": "planned",
+        "source": "SEATIQ_ProductLead_TechCommercialization_PitchDeck_1o2.pdf"
+      },
+      {
+        "rank": 2,
+        "name": "Target reach of 20,000 users",
+        "measure_type": "business_target",
+        "value": "20,000 users",
+        "basis": "planned",
+        "source": "SEATIQ_ProductLead_TechCommercialization_PitchDeck_1o2.pdf"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "SEATIQ_ProductLead_TechCommercialization_BrandingGuidelines_2o2",
+        "filename": "SEATIQ_ProductLead_TechCommercialization_BrandingGuidelines_2o2.pdf",
+        "artifact_type": "branding_guidelines",
+        "format": "pdf",
+        "sequence": 2,
+        "sequence_total": 2,
+        "prefix_source": "filename",
+        "notes": null
+      },
+      {
+        "artifact_id": "SEATIQ_ProductLead_TechCommercialization_PitchDeck_1o2",
+        "filename": "SEATIQ_ProductLead_TechCommercialization_PitchDeck_1o2.pdf",
+        "artifact_type": "pitch_deck",
+        "format": "pdf",
+        "sequence": 1,
+        "sequence_total": 2,
+        "prefix_source": "filename",
+        "notes": null
+      }
+    ],
+    "problem": "Short-statured drivers are 47% more likely to be severely injured in crashes, according to the pitch deck.",
+    "approach": "Concept for a mobile app that uses bioinformatics-style fit analysis to help drivers find a safer, more comfortable seating position. Built a go-to-market and market-sizing plan.",
+    "limitations": "Concept stage. The product has not launched.",
+    "image": "images/seat-iq.jpg",
+    "figures": [
+      {
+        "image": "images/figures/seat-iq-1.png",
+        "caption": "Cost composition by category, Y0–Y6 (projection)",
+        "source": "SEAT IQ pitch deck, p. 20"
+      },
+      {
+        "image": "images/figures/seat-iq-2.png",
+        "caption": "Total costs vs. revenue, Y0–Y6 (projection; break-even in Y4)",
+        "source": "SEAT IQ pitch deck, p. 21"
+      }
+    ],
+    "flagship": true,
+    "related": [
+      {
+        "project_id": "optimizing-seating",
+        "relation": "SEAT IQ turns this research into a marketable product.",
+        "label": "Optimizing Seating to Reduce Injury Severity in Short-Statured Drivers (OSPVS)"
+      }
+    ],
+    "headline": "A concept app with a planned 2.2M serviceable obtainable market and a 20,000-user target, with break-even projected in Year 4 (planned, not measured)."
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "mckinsey-case",
+    "title": "CABANA FEET 2025 Case Study",
+    "short_name": "McKinsey Case",
+    "file_prefix": "McKinseyCaseStudy",
+    "summary": "Team case study on scaling operations and meeting a 317% increase in demand while staying true to the brand's roots.",
+    "context": {
+      "type": "case_competition",
+      "course_code": null,
+      "institution": null,
+      "term": "Fall 2025",
+      "team_size": 5,
+      "role": "Co-lead; People and Financial Specialist"
+    },
+    "domain": "Operations, strategy & programs",
+    "industry": "Consumer products",
+    "business_context": "Consumer products: demand and fulfillment",
+    "status": "complete",
+    "evidence_level": "applied",
+    "visibility": "public",
+    "featured": false,
+    "tags": [
+      "case study",
+      "leadership",
+      "forecasting"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Operations strategy"
+      },
+      {
+        "rank": 2,
+        "name": "Financial planning"
+      },
+      {
+        "rank": 3,
+        "name": "Team leadership"
+      },
+      {
+        "rank": 4,
+        "name": "Presentation and pitching"
+      },
+      {
+        "rank": 5,
+        "name": "Problem framing"
+      }
+    ],
+    "tools": [],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Demand forecasting"
+      },
+      {
+        "rank": 2,
+        "name": "KPI and ROI analysis"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Business strategy"
+      },
+      {
+        "rank": 2,
+        "name": "Team leadership"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Diagnosed a 317% demand increase against 24% order fulfillment",
+        "measure_type": "case_metric",
+        "value": "317% demand increase; 24% orders met",
+        "basis": "case_material",
+        "source": "McKinseyCaseStudy_CoLead_ProfessionalLeadership_PitchDeck_1o1.pdf"
+      },
+      {
+        "rank": 2,
+        "name": "Recommended adding labor to lift output at full quality",
+        "measure_type": "business_target",
+        "value": "50% more labor option",
+        "basis": "case_material",
+        "source": "McKinseyCaseStudy_CoLead_ProfessionalLeadership_PitchDeck_1o1.pdf"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "McKinseyCaseStudy_CoLead_ProfessionalLeadership_PitchDeck_1o1",
+        "filename": "McKinseyCaseStudy_CoLead_ProfessionalLeadership_PitchDeck_1o1.pdf",
+        "artifact_type": "case_study_deck",
+        "format": "pdf",
+        "sequence": 1,
+        "sequence_total": 1,
+        "prefix_source": "filename",
+        "notes": null
+      }
+    ],
+    "problem": "Demand rose 317% while only 24% of orders were being met. How can the business scale without losing its roots?",
+    "approach": "Team case study of five, co-led by me. Analyzed the current state, forecast demand, and recommended options such as adding labor to raise output at full quality.",
+    "limitations": "Case-study recommendations, not a live implementation.",
+    "image": "images/mckinsey-case.jpg",
+    "flagship": false,
+    "headline": "Diagnosed a 317% demand increase against 24% order fulfillment, and recommended adding labor to lift output at full quality."
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "portfolio-website",
+    "title": "Sophie Portfolio (personal site)",
+    "short_name": "Portfolio Website",
+    "file_prefix": null,
+    "summary": "Personal portfolio site built with React and deployed to GitHub Pages.",
+    "context": {
+      "type": "personal",
+      "course_code": null,
+      "institution": null,
+      "term": null,
+      "team_size": 1,
+      "role": "Sole author"
+    },
+    "domain": "Web development",
+    "industry": "Personal branding & professional services",
+    "business_context": "Personal branding and job search",
+    "status": "in_progress",
+    "evidence_level": "built",
+    "visibility": "unlisted",
+    "featured": false,
+    "tags": [
+      "React",
+      "GitHub Pages"
+    ],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Web development"
+      }
+    ],
+    "tools": [
+      {
+        "rank": 1,
+        "name": "React"
+      },
+      {
+        "rank": 2,
+        "name": "Git"
+      }
+    ],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "Component-based UI design"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Personal branding"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Site deployed through a GitHub Pages pipeline",
+        "measure_type": "delivery_milestone",
+        "value": "Deploy script configured",
+        "basis": "delivered",
+        "source": "package.json"
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "package",
+        "filename": "package.json",
+        "artifact_type": "source_package",
+        "format": "json",
+        "sequence": null,
+        "sequence_total": null,
+        "prefix_source": "none",
+        "notes": "No project prefix. Linked by location (repo root)."
+      }
+    ],
+    "image": null,
+    "flagship": false
+  },
+  {
+    "schema_version": "2.2",
+    "project_id": "transfer-leadership",
+    "title": "Leadership Transfers!: Transfer Ambassador Program Proposal",
+    "short_name": "Leadership Transfers!",
+    "file_prefix": "TransferAmbassador",
+    "summary": "Proposal for a 4-week leadership development course for transfer students as a Spring community and campus resource, complete with campus partners, activities, outcomes, and risk mitigation.",
+    "context": {
+      "type": "program",
+      "institution": "UNT Transfer Center",
+      "course_code": null,
+      "term": "Spring 2027 (proposed)",
+      "team_size": 1,
+      "role": "Sole author",
+      "affiliation": "Transfer Ambassador"
+    },
+    "domain": "Operations, strategy & programs",
+    "industry": "Human resources & recruiting",
+    "business_context": "Transfer student engagement and leadership development at a large public university",
+    "status": "proposal",
+    "evidence_level": "claimed",
+    "visibility": "public",
+    "featured": false,
+    "flagship": false,
+    "tags": [],
+    "skills": [
+      {
+        "rank": 1,
+        "name": "Program design"
+      },
+      {
+        "rank": 2,
+        "name": "User research"
+      },
+      {
+        "rank": 3,
+        "name": "Problem framing"
+      },
+      {
+        "rank": 4,
+        "name": "Risk management"
+      },
+      {
+        "rank": 5,
+        "name": "Presentation and pitching"
+      }
+    ],
+    "tools": [
+      {
+        "rank": 1,
+        "name": "Microsoft Word"
+      }
+    ],
+    "techniques": [
+      {
+        "rank": 1,
+        "name": "SWOT analysis"
+      },
+      {
+        "rank": 2,
+        "name": "Gap analysis"
+      },
+      {
+        "rank": 3,
+        "name": "Trend analysis"
+      }
+    ],
+    "competencies": [
+      {
+        "rank": 1,
+        "name": "Team leadership"
+      },
+      {
+        "rank": 2,
+        "name": "Human-centered design"
+      },
+      {
+        "rank": 3,
+        "name": "Business strategy"
+      },
+      {
+        "rank": 4,
+        "name": "Data-driven decision making"
+      },
+      {
+        "rank": 5,
+        "name": "Technical communication"
+      }
+    ],
+    "outcomes": [
+      {
+        "rank": 1,
+        "name": "Structured proposal and SWOT analysis for 3 programs, each with 4 sessions",
+        "measure_type": "delivery_milestone",
+        "value": "Proposal and SWOT analysis",
+        "basis": "planned",
+        "source": "SpringCommunities_TransferAmbassador_OTP_ProgramProposal_1o1.pdf",
+        "show_basis": false
+      },
+      {
+        "rank": 2,
+        "name": "Four sessions: involvement, time management and systems, influence and team building, and career stories",
+        "measure_type": "delivery_milestone",
+        "value": "Leadership development with 5 campus partners",
+        "basis": "planned",
+        "source": "SpringCommunities_TransferAmbassador_OTP_ProgramProposal_1o1.pdf",
+        "show_basis": false
+      }
+    ],
+    "artifacts": [
+      {
+        "artifact_id": "SpringCommunities_TransferAmbassador_OTP_ProgramProposal_1o1",
+        "filename": "SpringCommunities_TransferAmbassador_OTP_ProgramProposal_1o1.pdf",
+        "artifact_type": "project_report",
+        "format": "pdf",
+        "sequence": 1,
+        "sequence_total": 1,
+        "prefix_source": "filename",
+        "notes": null
+      }
+    ],
+    "problem": "Transfer students have less time than other students to get involved and grow into campus leadership roles. Most leadership programs serve students already in leadership or underclassmen, and campus leadership offerings are not adequately advertised or coordinated.",
+    "approach": "**Analyzed** outcomes from previous programs and gaps in programming to identify opportunities and guidelines for successful programs.\n**Proposed** three Spring programs for the Transfer Center, each with four sessions.\n**Wrote** a four-week leadership course with five campus partners. Students build skills through workshops on involvement, time management and systems, influence and team building, and turning involvement into a career story.\n**Planned** each program's opportunities, potential issues, a plan to counteract those issues, and each event.",
+    "limitations": "This work is currently a proposal and is waiting on department approval for deployment in Spring 2027. It demonstrates my ability to understand user needs, evaluate outcomes from previous programs to shape future activities, design clear programs with purpose and activities, identify opportunities, identify and manage risks and issues, develop comprehensive programs, and communicate professionally.",
+    "image": "images/transfer-leadership.png",
+    "awards": [],
+    "figures": [],
+    "headline": "Structured proposal and SWOT analysis for 4-week leadership course with 5 campus partners."
+  }
+]

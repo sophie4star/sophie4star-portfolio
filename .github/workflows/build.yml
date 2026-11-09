@@ -1,0 +1,44 @@
+name: Rebuild portfolio site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the files
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install tools (PDF text reader and schema checker)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y poppler-utils
+          pip install jsonschema
+
+      - name: Build index.html from projects.json
+        env:
+          PORTFOLIO_REPO: "."
+        run: python build_site.py
+
+      - name: Save the new index.html to the repository
+        run: |
+          git config user.name "portfolio-bot"
+          git config user.email "portfolio-bot@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "index.html did not change. Nothing to save."
+          else
+            git commit -m "Rebuild site from projects.json"
+            git push
+          fi
