@@ -123,7 +123,8 @@
     "problem": "Camp records live in separate systems for staff, campers, payroll, health, and logistics, which makes it hard to see the whole operation or compare it year to year.",
     "approach": "Designed and built a 14-table relational database in MySQL with documented business rules. Loaded it from CSV and wrote queries that answer real management questions.",
     "limitations": "Built and tested on sample data. The report labels all figures as examples of how the database could operate and handle situations.",
-    "flagship": false
+    "flagship": false, 
+	"image": "images/camp-dbms.jpg"
   },
   {
     "schema_version": "2.2",
