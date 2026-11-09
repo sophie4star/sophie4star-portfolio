@@ -5,7 +5,7 @@
     "title": "Summer Camp Management System",
     "short_name": "Camp DBMS",
     "file_prefix": "CampDBMS",
-    "summary": "Relational database for a summer camp: 14 MySQL tables, business rules, and four analytical queries.",
+    "summary": "Relational database for a summer camp: 14 MySQL tables, business rules, and four analytical queries; integrate enrollment, payment, logistics, staffing, etc.",
     "context": {
       "type": "course",
       "course_code": "INFO 4707.401",
@@ -75,10 +75,6 @@
     "competencies": [
       {
         "rank": 1,
-        "name": "Database design"
-      },
-      {
-        "rank": 2,
         "name": "Data-driven decision making"
       }
     ],
@@ -122,7 +118,7 @@
     ],
     "problem": "Camp records live in separate systems for staff, campers, payroll, health, and logistics, which makes it hard to see the whole operation or compare it year to year.",
     "approach": "Designed and built a 14-table relational database in MySQL with documented business rules. Loaded it from CSV and wrote queries that answer real management questions.",
-    "limitations": "Built and tested on sample data. The report labels all figures as examples.",
+    "limitations": "Built and tested on sample data. The report labels all figures as examples of how the database could operate and handle situations.",
     "flagship": false
   },
   {
@@ -138,7 +134,7 @@
       "institution": "University of North Texas",
       "term": "Fall 2025",
       "team_size": 3,
-      "role": "Team lead (per filename; confirm)"
+      "role": "Team lead"
     },
     "domain": "Data science & machine learning",
     "industry": "Human resources & recruiting",
@@ -332,14 +328,14 @@
     "summary": "Cleans and analyzes ISEF award data to find trends in categories, awards, and keywords across a decade.",
     "context": {
       "type": "course",
-      "course_code": "INFO 4707",
+      "course_code": "INFO 4709",
       "institution": "University of North Texas",
       "term": "Spring 2026",
       "team_size": 1,
       "role": "Sole author"
     },
     "domain": "Data science & machine learning",
-    "industry": "Education (STEM competitions)",
+    "industry": "Education",
     "business_context": "Education program analysis (STEM competitions)",
     "status": "complete",
     "evidence_level": "built",
@@ -526,7 +522,7 @@
     "context": {
       "type": "course",
       "course_code": "DTSC3010",
-      "institution": null,
+      "institution": "University of North Texas",
       "term": "Fall 2024",
       "team_size": 1,
       "role": "Sole author"
@@ -1587,8 +1583,8 @@
     "summary": "Mobile app concept using bioinformatics-style fit analysis to optimize driving position for safety, comfort, and accessibility.",
     "context": {
       "type": "course",
-      "course_code": null,
-      "institution": null,
+      "course_code": "INFO4910",
+      "institution": "University of North Texas",
       "term": "Spring 2026",
       "team_size": 3,
       "role": "Product lead"
@@ -1913,7 +1909,7 @@
       "affiliation": "Transfer Ambassador"
     },
     "domain": "Operations, strategy & programs",
-    "industry": "Human resources & recruiting",
+    "industry": "Education",
     "business_context": "Transfer student engagement and leadership development at a large public university",
     "status": "proposal",
     "evidence_level": "claimed",
@@ -1966,23 +1962,15 @@
     "competencies": [
       {
         "rank": 1,
-        "name": "Team leadership"
-      },
-      {
-        "rank": 2,
         "name": "Human-centered design"
       },
       {
-        "rank": 3,
+        "rank": 2,
         "name": "Business strategy"
       },
       {
-        "rank": 4,
+        "rank": 3,
         "name": "Data-driven decision making"
-      },
-      {
-        "rank": 5,
-        "name": "Technical communication"
       }
     ],
     "outcomes": [
