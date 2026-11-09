@@ -126,6 +126,7 @@
     "industry": {
       "enum": [
         "Education",
+		"Human resources & recruiting",
         "Public health & global development",
         "Life sciences research",
         "Automotive safety & mobility",
@@ -340,19 +341,12 @@
           "name": {
             "enum": [
               "Data-driven decision making",
-              "Predictive analytics",
+			  "Systems design & thinking", 
               "Technical communication",
               "Product management",
               "Business strategy",
-              "Embedded systems design",
-              "Systems engineering",
               "Team leadership",
-              "Database design",
-              "Computational biology research",
-              "Human-centered design",
-              "Hardware-software integration",
-              "Trust and safety design",
-              "Personal branding"
+              "Human-centered design"
             ]
           }
         }

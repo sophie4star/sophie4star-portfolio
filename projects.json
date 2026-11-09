@@ -76,6 +76,10 @@
       {
         "rank": 1,
         "name": "Data-driven decision making"
+      },
+	  {
+        "rank": 2,
+        "name": "Systems design & thinking"
       }
     ],
     "outcomes": [
@@ -217,18 +221,14 @@
     "competencies": [
       {
         "rank": 1,
-        "name": "Predictive analytics"
-      },
-      {
-        "rank": 2,
         "name": "Data-driven decision making"
       },
       {
-        "rank": 3,
+        "rank": 2,
         "name": "Team leadership"
       },
       {
-        "rank": 4,
+        "rank": 3,
         "name": "Technical communication"
       }
     ],
@@ -604,14 +604,10 @@
     "competencies": [
       {
         "rank": 1,
-        "name": "Predictive analytics"
-      },
-      {
-        "rank": 2,
         "name": "Data-driven decision making"
       },
       {
-        "rank": 3,
+        "rank": 2,
         "name": "Technical communication"
       }
     ],
@@ -796,7 +792,7 @@
     "competencies": [
       {
         "rank": 1,
-        "name": "Computational biology research"
+        "name": "Data-driven decision making"
       },
       {
         "rank": 2,
@@ -1052,7 +1048,7 @@
     "competencies": [
       {
         "rank": 1,
-        "name": "Systems engineering"
+        "name": "Systems design & thinking"
       },
       {
         "rank": 2,
@@ -1060,10 +1056,6 @@
       },
       {
         "rank": 3,
-        "name": "Embedded systems design"
-      },
-      {
-        "rank": 4,
         "name": "Technical communication"
       }
     ],
@@ -1224,15 +1216,15 @@
     "competencies": [
       {
         "rank": 1,
-        "name": "Embedded systems design"
+        "name": "Systems design & thinking"
       },
       {
         "rank": 2,
-        "name": "Hardware-software integration"
-      },
-      {
-        "rank": 3,
         "name": "Product management"
+      },
+	  {
+        "rank": 3,
+        "name": "Human-centered design"
       }
     ],
     "outcomes": [
@@ -1379,11 +1371,11 @@
     "competencies": [
       {
         "rank": 1,
-        "name": "Embedded systems design"
+        "name": "Systems design & thinking"
       },
       {
         "rank": 2,
-        "name": "Hardware-software integration"
+        "name": "Data-driven decision making"
       },
       {
         "rank": 3,
@@ -1510,11 +1502,19 @@
     "competencies": [
       {
         "rank": 1,
-        "name": "Trust and safety design"
-      },
-      {
-        "rank": 2,
         "name": "Product management"
+      },
+	  {
+        "rank": 2,
+        "name": "Business strategy"
+      },
+	  {
+        "rank": 3,
+        "name": "Team leadership"
+      },
+	  {
+        "rank": 4,
+        "name": "Human-centered design"
       }
     ],
     "outcomes": [
@@ -1638,6 +1638,10 @@
       {
         "rank": 2,
         "name": "Business strategy"
+      },
+	  {
+        "rank": 3,
+        "name": "Human-centered design"
       }
     ],
     "outcomes": [
@@ -1864,7 +1868,7 @@
     "competencies": [
       {
         "rank": 1,
-        "name": "Personal branding"
+        "name": "Human-centered design"
       }
     ],
     "outcomes": [
